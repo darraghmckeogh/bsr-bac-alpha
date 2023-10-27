@@ -1,0 +1,280 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Check your answers template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+
+      <h1 class="govuk-heading-l">
+        Check your answers
+      </h1>
+
+      <h2 class="govuk-heading-m">
+        Documents
+      </h2>
+
+      {{ govukSummaryList({
+        rows: [
+          {
+            key: {
+              text: "How do you want to supply the documents"
+            },
+            value: {
+              text: "Each as a different file"
+            },
+            actions: {
+              items: [
+                {
+                  href: "single-or-multiple-files",
+                  text: "Change",
+                  visuallyHiddenText: "Question 1"
+                }
+              ]
+            }
+          }
+          ,
+          {
+            key: {
+              text: "Upload safety case report"
+            },
+            value: {
+              text: "chester-house_safety-case-report(2).pdf"
+            },
+            actions: {
+              items: [
+                {
+                  href: "upload-scr",
+                  text: "Change",
+                  visuallyHiddenText: "Question 2"
+                }
+              ]
+            }
+          }
+          ,
+          {
+            key: {
+              text: "Upload resident engagement strategy"
+            },
+            value: {
+              text: "RES_chester-house.docx"
+            },
+            actions: {
+              items: [
+                {
+                  href: "upload-res",
+                  text: "Change",
+                  visuallyHiddenText: "Question 2"
+                }
+              ]
+            }
+          }
+          ,
+          {
+            key: {
+              text: "Have you submitted it in another application?"
+            },
+            value: {
+              text: "Yes"
+            },
+            actions: {
+              items: [
+                {
+                  href: "already-provided-res",
+                  text: "Change",
+                  visuallyHiddenText: "Question 3"
+                }
+              ]
+            }
+          }
+          ,
+          {
+            key: {
+              text: "Which application(s) did you include it in and are there any differences?"
+            },
+            value: {
+              text: "I submitted it for Stephens Court and nothing has changed since."
+            },
+            actions: {
+              items: [
+                {
+                  href: "already-provided-res-explanation",
+                  text: "Change",
+                  visuallyHiddenText: "Question 3"
+                }
+              ]
+            }
+          }
+          ,
+          {
+            key: {
+              text: "Upload mandatory occurrence reporting plan"
+            },
+            value: {
+              text: "Mandatory-occurence-reporting-plan(Greenways ltd).docx"
+            },
+            actions: {
+              items: [
+                {
+                  href: "upload-mor",
+                  text: "Change",
+                  visuallyHiddenText: "Question 3"
+                }
+              ]
+            }
+          }
+          ,
+          {
+            key: {
+              text: "Have you submitted it in another application?"
+            },
+            value: {
+              text: "Yes"
+            },
+            actions: {
+              items: [
+                {
+                  href: "already-provided-mor",
+                  text: "Change",
+                  visuallyHiddenText: "Question 3"
+                }
+              ]
+            }
+          }
+          ,
+          {
+            key: {
+              text: "Which application(s) did you include it in and are there any differences?"
+            },
+            value: {
+              text: "Its the same for all of our buildings."
+            },
+            actions: {
+              items: [
+                {
+                  href: "already-provided-mor-explanation",
+                  text: "Change",
+                  visuallyHiddenText: "Question 3"
+                }
+              ]
+            }
+          }
+        ]
+      }) }}
+
+      <h2 class="govuk-heading-m">Invoices</h2>
+
+      {{ govukSummaryList({
+        rows: [
+          {
+            key: {
+              text: "Name on the invoice"
+            },
+            value: {
+              text: "Charlotte Smith"
+            },
+            actions: {
+              items: [
+                {
+                  href: "invoice",
+                  text: "Change",
+                  visuallyHiddenText: "Question 1"
+                }
+              ]
+            }
+          }
+          ,
+          {
+            key: {
+              text: "Email address"
+            },
+            value: {
+              text: "charlotte.smith@greenways.co.uk"
+            },
+            actions: {
+              items: [
+                {
+                  href: "invoice",
+                  text: "Change",
+                  visuallyHiddenText: "Question 2"
+                }
+              ]
+            }
+          }
+          ,
+          {
+            key: {
+              text: "Billing address"
+            },
+            value: {
+              text: "111 Arndale Avenue, Manchester, M2 7BA"
+            },
+            actions: {
+              items: [
+                {
+                  href: "invoice",
+                  text: "Change",
+                  visuallyHiddenText: "Question 2"
+                }
+              ]
+            }
+          }
+          ,
+          {
+            key: {
+              text: "Do you need a purchase order number?"
+            },
+            value: {
+              text: "Yes - I have a purchase order number"
+            },
+            actions: {
+              items: [
+                {
+                  href: "invoice",
+                  text: "Change",
+                  visuallyHiddenText: "Question 3"
+                }
+              ]
+            }
+          }
+          ,
+          {
+            key: {
+              text: "Purchase order number"
+            },
+            value: {
+              text: "PO1245821"
+            },
+            actions: {
+              items: [
+                {
+                  href: "invoice",
+                  text: "Change",
+                  visuallyHiddenText: "Question 3"
+                }
+              ]
+            }
+          }
+        ]
+      }) }}
+
+      <form action="declare-89" method="post" novalidate>
+
+        {{ govukButton({
+          text: "Save and continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}

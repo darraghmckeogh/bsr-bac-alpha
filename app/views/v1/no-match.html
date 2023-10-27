@@ -1,0 +1,25 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Confirmation page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">Email address doesn't match this application number</h1>
+
+      <p>Only the person who registered the building, or people they have told us to add as users can access building applications.</p>
+
+      <p>
+        If the person with access to the building application is no longer around, you must <a href="#">contact us</a> to get this changed.
+      </p>
+
+      <p><a href="access-an-application">Access another application</a></p>
+
+    </div>
+  </div>
+
+{% endblock %}
