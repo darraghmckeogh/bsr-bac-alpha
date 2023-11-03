@@ -1,0 +1,116 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+{{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+
+  {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Home",
+        href: "#"
+      },
+      {
+        text: "Housing, local and community",
+        href: "#"
+      },
+      {
+        text: "Planning and building",
+        href: "#"
+      },
+      {
+        text: "Building regulation",
+        href: "#"
+      }
+    ]
+  }) }}
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        {{ serviceName }}
+      </h1>
+
+      <p>Use this service to submit an application for a building assessment certificate.</p>
+
+      <p>The Building Safety Regulator will tell you when you need to apply for a building assessment certificate. You can only apply when BSR directs you to.</p>
+
+      <p>You will need to upload:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>safety case report</li>
+        <li>mandatory occurrence reporting plan</li>
+        <li>resident engagement strategy</li>
+      </ul>
+
+      <p>You will need to declare that you are keeping all of the relevant people, such as other accountable persons, up to date.</p>
+
+      <p>You will need to provide details so we can send you invoices. You will be charged for the work undertaken to assess your application.</p>
+
+      <p>You will also need to pay the application fee of £288. You can pay this by card or invoice.</p>
+
+      <p>Find out more about the <a href="#">Building Safety Regulator charging scheme</a>.</p>
+
+      <p>Once you have submitted your application, it will take some time to review it. If we are not satisfied with your application, we will contact you to rectify any problems.</p>
+
+      <p>If you're granted a building assessment certificate, you will be able to download it. You must print it and display it somewhere in the building where residents will see it.</p>
+
+      {{ govukButton({
+        text: "Start now",
+        href: "access-an-application",
+        isStartButton: true
+      }) }}
+
+      <h2 class="govuk-heading-m">
+        Before you start
+      </h2>
+
+      <p>
+        If you need help using this service <a href="#">contact us</a>.
+      </p>
+
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+
+      <aside class="govuk-prototype-kit-common-templates-related-items" role="complementary">
+        <h2 class="govuk-heading-m" id="subsection-title">
+          Related guidance
+        </h2>
+        <nav role="navigation" aria-labelledby="subsection-title">
+          <ul class="govuk-list govuk-!-font-size-16">
+            <li>
+              <a href="#">
+                Safety case reports
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Mandatory occrruence reporting
+              </a>
+            </li>
+            <li>
+              <a href="#" class="govuk-!-font-weight-bold">
+                More <span class="govuk-visually-hidden">in Related guidance</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+    </div>
+  </div>
+
+{% endblock %}

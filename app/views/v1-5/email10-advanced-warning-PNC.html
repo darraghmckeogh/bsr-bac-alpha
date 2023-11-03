@@ -1,0 +1,56 @@
+{% extends "govuk-prototype-kit/layouts/unbranded.html" %}
+
+{% block pageTitle %}
+  Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-!-padding-bottom-5"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Microsoft_Office_Outlook_%282018–present%29.svg/826px-Microsoft_Office_Outlook_%282018–present%29.svg.png" width="40px"></div>
+
+<p><strong>From:</strong> noreplyBSR@hse.gov.uk
+  <br><strong>To:</strong> Charlotte Smith
+  <br><strong>Subject:</strong> You will soon be told to apply for building assessment certificates
+</p>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+{% from "govuk/components/header/macro.njk" import govukHeader %}
+{{ govukHeader({
+  homepageUrl: "#"
+}) }}
+
+<div class="govuk-!-padding-bottom-5"></div>
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+<p>We will be directing you to apply for a building assessment certificate for these buildings in the next 12 months:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+    <li>Chester House (HRB123456789)</li>
+    <li>Shepherds Court (HRB987654321)</li>
+    <li>Dual Towers (HRB122333344)</li>
+    <li>Avon Court (HRB998877665)</li>
+</ul>
+
+<p>Find out what you must include in your application at <a href="#">www.gov.uk/guidance/building-assessment-certification</a>.</p>
+
+<p>We will email you to tell you when you need to submit your application for a building assessment certificate for each of these buildings. When we do this you will have 28 days to submit.</p>
+
+<p>From the Health and Safety Executive</p>
+
+<p>As the Building Saefty Regulator</p>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+<p>Do not reply to this email. It’s an automatic message from an unmonitored account.</p>
+
+</div>
+</div>
+
+<div style="background-color:rgb(55, 55, 89); border: 1px; width: 300px; padding: 20px; margin-bottom: 20px; margin-left: -20px;">
+  <a style="color: white;" href="email20-direction-to-apply-PNC">View next email from noreplyBSR</a>
+</div>
+
+{% endblock %}
