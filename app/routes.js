@@ -182,7 +182,7 @@ router.post('/already-provided-all-answer', function (req, res) {
     if (allDocs == "yes") {
       res.redirect('/v2/already-provided-all-explanation')
     } else {
-      res.redirect('/v2/invoice')
+      res.redirect('/v2/receive-notices')
     }
   
   })
