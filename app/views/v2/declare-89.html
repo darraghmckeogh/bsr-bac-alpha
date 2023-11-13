@@ -1,0 +1,41 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Declaration – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Confirm you are keeping the relevant people up to date
+      </h1>
+
+      <p>
+        By continuing you are declaring that Greenways Limited are fulfilling their duty to provide all of the prescribed information about Chester House to:
+      </p>
+
+      <uL class="govuk-list govuk-list--bullet">
+        <li>all accountable persons</li>
+        <li>residents</li>
+        <li>the Building Safety Regulator</li>
+      </uL>
+
+      <form class="form" action="upload-separate" method="post">
+
+        <button class="govuk-button" data-module="govuk-button">Agree and continue</button>
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

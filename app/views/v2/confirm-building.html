@@ -1,0 +1,37 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">Is this the correct building?
+      </h1>
+
+      <div class="govuk-inset-text">
+        Chester House
+        <br>11 Example Street
+        <br>Leeds
+        <br>LE3 5GH
+      </div>
+
+      <form class="form" action="name" method="post">
+
+        <button class="govuk-button" data-module="govuk-button">Confirm</button>
+
+      </form>
+
+      <p><a href="reference">Apply for another building</a></p>
+
+    </div>
+  </div>
+
+{% endblock %}

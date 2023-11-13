@@ -1,0 +1,67 @@
+{% extends "govuk-prototype-kit/layouts/unbranded.html" %}
+
+{% block pageTitle %}
+  Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-!-padding-bottom-5"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Microsoft_Office_Outlook_%282018–present%29.svg/826px-Microsoft_Office_Outlook_%282018–present%29.svg.png" width="40px"></div>
+
+<p><strong>From:</strong> noreplyBSR@hse.gov.uk
+  <br><strong>To:</strong> Charlotte Smith
+  <br><strong>Subject:</strong> Application for Building Assessment Certificate for Chester House submitted
+</p>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+{% from "govuk/components/header/macro.njk" import govukHeader %}
+{{ govukHeader({
+  homepageUrl: "#"
+}) }}
+
+<div class="govuk-!-padding-bottom-5"></div>
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <p>We have recieved your application for a Building Assessment Certificate for Chester House.</p>
+
+      <h2 class="govuk-heading-m">
+        What happens next
+      </h2>
+
+      <p>Your application will be assigned to a case officer, who will contact you about your application soon. They might ask you for more information.</p>
+
+      <p>It may take us several months to review your application.</p>
+
+      <p>If you need to talk to someone about your application before the case officer gets in touch with you, <a href="#">contact BSR</a>.</p>
+
+      <p>Your application reference is BAC123456789. You'll need this if you need to contact us about your application.</p>
+
+      <h2 class="govuk-heading-m">
+        Paying your invoice
+      </h2>
+
+      <p>
+        [We've sent an invoice for the application fee to charlotte.smith@greenways.co.uk. You must pay this within 30 days.]
+      </p>
+
+      <p>We will send an invoice [to charlotte.smith@greenways.co.uk] at the start of every month to charge you for the work undertaken to review your application. You can <a href="https://consultations.hse.gov.uk/bsr/fees-and-charges-regs/results/consultation-response-fees-and-charges-regulations-august-2023.pdf">learn more about the BSR charging scheme</a>.</p>
+
+<p>From the Health and Safety Executive</p>
+
+<p>As the Building Safety Regulator</p>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+<p>Do not reply to this email. It’s an automatic message from an unmonitored account.</p>
+
+</div>
+</div>
+
+<div style="background-color:rgb(55, 55, 89); border: 1px; width: 300px; padding: 20px; margin-bottom: 20px; margin-left: -20px;">
+  <a style="color: white;" href="email70-request-for-more-information">New email from noreplyBSR</a>
+</div>
+
+{% endblock %}
