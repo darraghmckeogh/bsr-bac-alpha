@@ -1,0 +1,52 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Enter security code – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">Verify your email address</h1>
+
+      <p>We have sent a 6-digit security code to: <strong>{{ data['email'] }}</strong>.</p>
+
+      <p>If you cannot find the email, please check your junk or spam folders.</p>
+
+      <p>If you still cannot find it, or it has timed out <a href="generate-new-security-code">generate a new security code</a>.</p>
+
+      <form class="form" action="bac-holding-page" method="post">
+
+        {% from "govuk/components/input/macro.njk" import govukInput %}
+        {{ govukInput({
+          label: {
+            text: "Security code",
+            classes: "govuk-label--s",
+            isPageHeading: false
+          },
+          hint: {
+            text: "For example, '123456'"
+          },
+          id: "security-code",
+          name: "security-code",
+          classes: "govuk-input--width-10"
+        }) }}
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+      <div style="background-color:rgb(55, 55, 89); border: 1px; width: 300px; padding: 20px; margin-bottom: 20px; margin-left: -20px;">
+        <a style="color: white;" href="email50-security-code">New email from noreplyBSR</a>
+      </div>
+
+    </div>
+  </div>
+
+{% endblock %}

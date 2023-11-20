@@ -1,0 +1,53 @@
+{% extends "govuk-prototype-kit/layouts/unbranded.html" %}
+
+{% block pageTitle %}
+  Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-!-padding-bottom-5"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Microsoft_Office_Outlook_%282018–present%29.svg/826px-Microsoft_Office_Outlook_%282018–present%29.svg.png" width="40px"></div>
+
+<p><strong>From:</strong> noreplyBSR@hse.gov.uk
+  <br><strong>To:</strong> Charlotte Smith
+  <br><strong>Subject:</strong> Apply for a building assessment certificate for Chester House
+</p>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+{% from "govuk/components/header/macro.njk" import govukHeader %}
+{{ govukHeader({
+  homepageUrl: "#"
+}) }}
+
+<div class="govuk-!-padding-bottom-5"></div>
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+<p>Greenways Limited must now apply for a building assessment certificate for Chester House. They must do this within 28 days of us sending this email.</p>
+
+<p>Submit an application at <a href="start">www.apply-for-building-assesment-certificate.service.gov.uk</a>.</p>
+
+<p>Your unique application reference for your building assessment certificate application is BAC123456789. Keep this safe.</p>
+
+<p>Anyone can enter this to start the application. Once someone starts the application, only they will be able to access it.</p>
+
+<p>Find out what must be included in the application at <a href="#">www.gov.uk/guidance/building-assessment-certification</a>.</p>
+
+<h2 class="govuk-heading-m">If you do not think you should have recieved this email</h2>
+
+<p>If you are not the named contact at Greenways Limited, contact BSR at: <a href="#">www.contact-building-safety-regulator.service.gov.uk</a>.</p>
+
+<p>From the Health and Safety Executive</p>
+
+<p>As the Building Saefty Regulator</p>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+<p>Do not reply to this email. It’s an automatic message from an unmonitored account.</p>
+
+</div>
+</div>
+
+{% endblock %}

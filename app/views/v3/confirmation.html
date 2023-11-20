@@ -1,0 +1,48 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Application submitted – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      {{ govukPanel({
+        titleText: "Application for building assessment certificate for Chester House submitted",
+        html: "Application reference<br><strong>BAC123456789</strong>"
+      }) }}
+
+      <p>
+        We have sent you a confirmation email. We have also sent a confirmation email to the named contact at Greenways Limited.
+      </p>
+
+      <h2 class="govuk-heading-m">
+        What happens next
+      </h2>
+
+      <p>Your application will be assigned to a case officer, who will contact you about your application soon. They might ask you for more information.</p>
+
+      <p>It may take us several months to review your application.</p>
+
+      <p>If you need to talk to someone about your application before the case officer gets in touch with you, <a href="#">contact BSR</a>.</p>
+
+      <h2 class="govuk-heading-m">
+        Paying your invoice
+      </h2>
+
+      <p>
+        [We've sent an invoice for the application fee to charlotte.smith@greenways.co.uk. You must pay this within 30 days.]
+      </p>
+
+      <p>We will send an invoice [to charlotte.smith@greenways.co.uk] at the start of every month to charge you for the work undertaken to review your application. You can <a href="https://consultations.hse.gov.uk/bsr/fees-and-charges-regs/results/consultation-response-fees-and-charges-regulations-august-2023.pdf">learn more about the BSR charging scheme</a>.</p>
+
+    </div>
+  </div>
+
+  <div style="background-color:rgb(55, 55, 89); border: 1px; width: 300px; padding: 20px; margin-bottom: 20px; margin-left: -20px;">
+    <a style="color: white;" href="email65-submitted">New email from noreplyBSR</a>
+  </div>
+
+{% endblock %}

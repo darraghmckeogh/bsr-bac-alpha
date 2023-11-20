@@ -1,0 +1,220 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Charges for applying – {{ serviceName }} – GOV.UK
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">Charges for reviewing your application</h1>
+
+      <form class="form" action="check-answers" method="post">
+
+        <div class="govuk-info-banner govuk-!-margin-bottom-5" style="
+          background: rgb(243, 242, 241); padding: 20px; border-top: 2px solid rgb(53, 110, 181);">
+          <h2 class="govuk-heading-m">Why we need this</h2>
+          <p>You’ll be charged £144 per hour for BSR staff to work on your application, and for any costs BSR incur from relevant authorities or third parties. We’ll send a monthly invoice by email for these charges.</p>
+        </div>
+
+        <h2 class="govuk-heading-m">Enter invoice details</h2>
+
+      <h3 class="govuk-heading-s">Contact details</h3>
+
+      {% call govukFieldset({
+        legend: {
+          text: "",
+          classes: "",
+          isPageHeading: false
+        }
+      }) %}
+
+        {{ govukInput({
+          label: {
+            text: "Name on the invoice"
+          },
+          id: "invoiceName",
+          name: "invoiceName",
+          autocomplete: ""
+        }) }}
+
+        {{ govukInput({
+          label: {
+            text: "Email address"
+          },
+          hint: {
+            text: "We'll only use this to send you invoices. We will share this with the named contact at Greenways Limited so they know where the invoices will be sent to."
+          },
+          id: "invoiceEmail",
+          name: "invoiceEmail",
+          autocomplete: ""
+        }) }}
+
+      {% endcall %}
+
+      <h3 class="govuk-heading-s">Billing address</h3>
+
+      <p>This is the address associated with the account.</p>
+
+      {% from "govuk/components/input/macro.njk" import govukInput %}
+      {% from "govuk/components/fieldset/macro.njk" import govukFieldset %}
+
+       {% call govukFieldset({
+        legend: {
+          text: "",
+          classes: "",
+          isPageHeading: true
+        }
+      }) %}
+
+        {{ govukInput({
+          label: {
+            text: "Address line 1"
+          },
+          id: "address-line-1",
+          name: "addressLine1",
+          autocomplete: "address-line1"
+        }) }}
+
+        {{ govukInput({
+          label: {
+            text: "Address line 2 (optional)"
+          },
+          id: "address-line-2",
+          name: "addressLine2",
+          autocomplete: "address-line2"
+        }) }}
+
+        {{ govukInput({
+          label: {
+            text: "Town or city"
+          },
+          classes: "govuk-!-width-two-thirds",
+          id: "address-town",
+          name: "addressTown",
+          autocomplete: "address-level2"
+        }) }}
+
+        {{ govukInput({
+          label: {
+            text: "Postcode"
+          },
+          classes: "govuk-input--width-10",
+          id: "address-postcode",
+          name: "addressPostcode",
+          autocomplete: "postal-code"
+        }) }}
+
+      {% endcall %}
+
+      <h3 class="govuk-heading-s">Purchase order number</h3>
+
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            If you need to set HSE up as a payee
+          </span>
+        </summary>
+        
+        <div class="govuk-details__text">
+          <p>You may need the following information to get a purchase order number:</p>
+          {% from "govuk/components/table/macro.njk" import govukTable %}
+
+          {{ govukTable({
+            caption: "",
+            captionClasses: "govuk-table__caption--m",
+            firstCellIsHeader: true,
+            
+            rows: [
+              [
+                {
+                  text: "Billing name"
+                },
+                {
+                  text: "Health and Safety Executive"
+                }
+              ],
+              [
+                {
+                  text: "Billing address"
+                },
+                {
+                  text: "Redgrave Court, Merton Road,
+                  Bootle, Merseyside, L20 7HS"
+                }
+              ],
+              [
+                {
+                  text: "Reason for payment"
+                },
+                {
+                  text: "Apply for building assessment certificate for Chester House."
+                }
+              ]
+            ]
+          }) }}
+        </div>
+      </details>
+
+      {% from "govuk/components/radios/macro.njk" import govukRadios %}
+{% from "govuk/components/input/macro.njk" import govukInput %}
+
+{% set emailHtml %}
+{{ govukInput({
+  id: "contact-by-email",
+  name: "contactByEmail",
+  type: "email",
+  autocomplete: "email",
+  spellcheck: false,
+  classes: "govuk-!-width-two-thirds",
+  label: {
+    text: "Purchase order number"
+  }
+}) }}
+{% endset -%}
+
+
+{{ govukRadios({
+  name: "contact",
+  fieldset: {
+    legend: {
+      text: "Do you need a purchase order number on the invoices?",
+      isPageHeading: true,
+      classes: "govuk-body"
+    }
+  },
+  items: [
+    {
+      value: "Yes",
+      text: "Yes",
+      conditional: {
+        html: emailHtml
+      }
+    },
+    {
+      value: "No",
+      text: "No",
+      conditional: {
+        html: phoneHtml
+      }
+    }
+  ]
+}) }}
+      
+
+      <button type="submit" class="govuk-button" data-module="govuk-button">
+        Save and continue
+      </button>
+
+          </div>
+        </div>
+
+      {% endblock %}
+
+    </form>
+
+    
+
+
