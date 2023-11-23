@@ -1,7 +1,7 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-{{ serviceName }} – GOV.UK Prototype Kit
+Register and manage applications for high-rise residential buildings – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block header %}
@@ -40,38 +40,36 @@
     <div class="govuk-grid-column-two-thirds">
 
       <h1 class="govuk-heading-xl">
-        {{ serviceName }}
+        Register and manage applications for high-rise residential buildings
       </h1>
 
-      <p>The Building Safety Regulator will tell you when you need to apply for a building assessment certificate. You can only apply when BSR directs you to.</p>
-
-      <p>It is the duty of the principal accountable person to ensure the application is submitted within 28 days of being told to apply. If we do not recieve an application in time, they may be served an enforcement notice.</p>
-
-      <p>Only the principal accountable person, or someone authorised to act for them may submit an application.</p>
-
-      <p>You will need to upload:</p>
+      <p>If your organisation is the principal accountable person for a building, or the principal accountable person has authorised you to act for them, you can use this service to:</p>
 
       <ul class="govuk-list govuk-list--bullet">
-        <li>safety case report</li>
-        <li>an outline of your mandatory occurrence reporting system</li>
-        <li>resident engagement strategy</li>
+        <li>apply to register the building</li>
+        <li>provide structure and fire safety information</li>
+        <li>apply for a building assessment certificate</li>
+      </ul>
+      
+      <p>You can also use this service to tell the Building Safety Regulator:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>about changes to the regsitration or structure and safety information</li>
+        <li>when you have a safety case report</li>
+        <li>when you update your safety case report</li>
       </ul>
 
-      <p>You will need to declare that you are keeping all of the relevant people, such as other accountable persons, up to date.</p>
+      <div class="govuk-inset-text">
+        <p>The <a href="#">principal accountable person</a> is the organisation that owns or is accountable for the building’s safety.</p>
+        <p>In limited circumstances, an individual can be the principal accountable person.</p>
+        <p>If the building has more than one accountable person, the principal accountable person is the one who is accountable for the external walls and structure of the building.</p>
+      </div>
 
-      <p>You will need to provide details so we can send you invoices. You will be charged for the work undertaken to assess your application.</p>
-
-      <p>You will also need to pay the application fee of £288. You can pay this by card or invoice.</p>
-
-      <p>Find out more about the <a href="#">Building Safety Regulator charging scheme</a>.</p>
-
-      <p>Once you have submitted your application, it will take some time to review it. If we are not satisfied with your application, we will contact you to ask for more information.</p>
-
-      <p>If you're granted a building assessment certificate, you will be able to download it. You must print it and display it somewhere in the building where residents will see it.</p>
+      <p>You can save your application and return to it at any time.</p>
 
       {{ govukButton({
         text: "Start now",
-        href: "access-an-application",
+        href: "reference",
         isStartButton: true
       }) }}
 
