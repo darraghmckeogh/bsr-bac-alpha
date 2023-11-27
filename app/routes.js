@@ -228,12 +228,15 @@ router.post('/already-provided-all-answer', function (req, res) {
 
    // V3
 
-   router.post('/single-or-multiple-files-answer', function (req, res) {
+
+  router.post('/single-or-multiple-files-answer', function (req, res) {
 
     var connectedBuildings = req.session.data['single-or-multiple-files']
     if (connectedBuildings == "multiple") {
       res.redirect('/v3/upload-scr')
-    } else {
+    } else if (connectedBuildings == "two") {
+      res.redirect('/v3/upload-mor-in-scr')
+    } else if (connectedBuildings == "single") {
       res.redirect('/v3/upload-all')
     }
   
@@ -255,10 +258,25 @@ router.post('/already-provided-res-answer', function (req, res) {
 router.post('/already-provided-mor-answer', function (req, res) {
 
     var morDoc = req.session.data['already-provided-mor']
+    var resRequired = req.session.data['single-or-multiple-files']
     if (morDoc == "yes") {
       res.redirect('/v3/already-provided-mor-explanation')
+    } else if (resRequired == "single") {
+      res.redirect('/v3/recieve-notices')
     } else {
-      res.redirect('/v3/invoice')
+      res.redirect('/v3/upload-res')
+    }
+    
+  })
+
+
+  router.post('/already-provided-mor-explanation-answer', function (req, res) {
+
+    var resRequired = req.session.data['single-or-multiple-files']
+    if (resRequired == "single") {
+      res.redirect('/v3/recieve-notices')
+    } else {
+      res.redirect('/v3/upload-res')
     }
   
   })

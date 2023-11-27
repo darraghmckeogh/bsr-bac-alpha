@@ -27,15 +27,15 @@
         rows: [
           {
             key: {
-              text: "Upload safety case report"
+              text: "Upload a declaration that all the relevant people are being kept up to date"
             },
             value: {
-              text: "chester-house_safety-case-report(2).pdf"
+              text: "declaration-chester-house.pdf"
             },
             actions: {
               items: [
                 {
-                  href: "upload-separate",
+                  href: "upload-89",
                   text: "Change",
                   visuallyHiddenText: "Upload safety case report"
                 }
@@ -45,17 +45,35 @@
           ,
           {
             key: {
-              text: "Upload resident engagement strategy"
+              text: "How do you want to supply the documents"
             },
             value: {
-              text: "RES_chester-house.docx"
+              text: "Each as a different file"
             },
             actions: {
               items: [
                 {
-                  href: "upload-separate",
+                  href: "single-or-multiple-files",
                   text: "Change",
-                  visuallyHiddenText: "Upload resident engagement strategy"
+                  visuallyHiddenText: "Upload safety case report"
+                }
+              ]
+            }
+          }
+          ,
+          {
+            key: {
+              text: "Upload safety case report"
+            },
+            value: {
+              text: "chester-house_safety-case-report(2).pdf"
+            },
+            actions: {
+              items: [
+                {
+                  href: "upload-scr",
+                  text: "Change",
+                  visuallyHiddenText: "Upload safety case report"
                 }
               ]
             }
@@ -71,7 +89,7 @@
             actions: {
               items: [
                 {
-                  href: "upload-separate",
+                  href: "upload-mor",
                   text: "Change",
                   visuallyHiddenText: "Upload mandatory occurrence reporting plan"
                 }
@@ -81,35 +99,17 @@
           ,
           {
             key: {
-              text: "Have you submitted any of these documents in another application?"
+              text: "Upload resident engagement strategy"
             },
             value: {
-              text: "Yes"
+              text: "RES_chester-house.docx"
             },
             actions: {
               items: [
                 {
-                  href: "already-provided-all",
+                  href: "upload-res",
                   text: "Change",
-                  visuallyHiddenText: "Have you submitted it in another application?"
-                }
-              ]
-            }
-          }
-          ,
-          {
-            key: {
-              text: "Which application(s) did you include it in and are there any differences?"
-            },
-            value: {
-              text: "Its the same for all of our buildings."
-            },
-            actions: {
-              items: [
-                {
-                  href: "already-provided-all-explanation",
-                  text: "Change",
-                  visuallyHiddenText: "Which application(s) did you include it in and are there any differences?"
+                  visuallyHiddenText: "Upload resident engagement strategy"
                 }
               ]
             }

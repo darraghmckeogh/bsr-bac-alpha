@@ -1,0 +1,47 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Declaration – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+    text: "Back",
+    href: "javascript:window.history.back()"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Upload a declaration that all the relevant people are being kept up to date
+      </h1>
+
+      <p>All of the accountable persons for Chester House must confirm that they are keeping all of the relecant people up to date.</p>
+
+      <p>Upload a document declaring this, signed by each of the accountable persons.</p>
+
+      <p><a href="#">Find out what information you must provide to who (opens in new tab)</a></p>
+
+      <form class="form" action="single-or-multiple-files" method="post">
+
+        {% from "govuk/components/file-upload/macro.njk" import govukFileUpload %}
+
+        {{ govukFileUpload({
+          id: "file-upload-1",
+          name: "fileUpload1",
+          label: {
+            text: "Upload a file"
+          }
+        }) }}
+
+        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

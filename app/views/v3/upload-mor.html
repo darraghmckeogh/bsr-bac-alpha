@@ -1,5 +1,5 @@
 {% extends "layouts/main.html" %}
-{% set title = "Upload mandatory occurrence reporting plan for Chester House" %}
+{% set title = "Upload mandatory occurrence reporting system for Chester House" %}
 {% set serviceName = "Apply for a building assessment certificate" %}
 
 {% block pageTitle %}
@@ -27,9 +27,11 @@
 
       <form action="" method="post">
 
-    <div id="file-upload-1-hint" class="govuk-hint">
+        <p>Your mandatory occurrence reporting system is an outline of how safety related occurences are reported, documented and managed.</p>
+
+    <p>
       You can upload multiple files as pdf or word documents. Each file must each be smaller than 100MB.
-    </div>
+    </p>
 
     <p id="upload-update" class="govuk-body govuk-!-display-none" aria-live="assertive" aria-relevant="all">1 of 2 files uploaded</p>
 
@@ -40,7 +42,7 @@
     
     <div id="upload-wrapper" class="govuk-form-group">
       <label class="govuk-label" for="upload-button">
-        Upload supporting information
+        Upload mandatory occurrence reporting system
       </label>
       <input class="govuk-file-upload" id="upload-button" name="upload-button" type="file" multiple="multiple">
     </div>
@@ -54,8 +56,8 @@
       
     
         {{ govukButton({
-          text: "Continue",
-          href: "already-provided-mor"
+          text: "Save and continue",
+          href: "upload-res"
         }) }}
 
       </form>

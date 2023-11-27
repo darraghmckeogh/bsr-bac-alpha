@@ -25,11 +25,15 @@
       
       <h1 class="govuk-heading-l">{{ title }}</h1>
 
-      <form action="" method="post">
+    <p>
+      You only need to include evidence that directly demonstrates you are managing the building safety risks.
+    </p>
 
-    <div id="file-upload-1-hint" class="govuk-hint">
-      You can upload multiple files as pdf or word documents. Each file must each be smaller than 100MB.
-    </div>
+    <p>If you do not include something we need to see, we will ask you to upload it when we review your application.</p>
+
+    <p>
+      You can upload multiple files as PDF or Word documents. Each file must be smaller than 100MB.
+    </p>
 
     <p id="upload-update" class="govuk-body govuk-!-display-none" aria-live="assertive" aria-relevant="all">1 of 2 files uploaded</p>
 
@@ -40,7 +44,7 @@
     
     <div id="upload-wrapper" class="govuk-form-group">
       <label class="govuk-label" for="upload-button">
-        Upload supporting information
+        Upload safety case report
       </label>
       <input class="govuk-file-upload" id="upload-button" name="upload-button" type="file" multiple="multiple">
     </div>
@@ -51,14 +55,17 @@
 
     </dl>
 
-      
-    
-        {{ govukButton({
-          text: "Continue",
-          href: "upload-res"
-        }) }}
+    <form action="" method="post">
+
+      {% from "govuk/components/button/macro.njk" import govukButton %}
+
+      {{ govukButton({
+        text: "Save and continue",
+        href: "upload-mor"
+      }) }}
 
       </form>
+
   </div>
 </div>
 
