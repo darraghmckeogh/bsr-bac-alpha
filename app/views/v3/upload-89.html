@@ -17,14 +17,20 @@
     <div class="govuk-grid-column-two-thirds">
 
       <h1 class="govuk-heading-l">
-        Upload a declaration that all the relevant people are being kept up to date
+        Upload a declaration that all of the accountable persons are keeping all of the relevant people up to date
       </h1>
 
-      <p>All of the accountable persons for Chester House must confirm that they are keeping all of the relecant people up to date.</p>
+      <p>Upload a document signed by each of the accountable persons stating:</p>
 
-      <p>Upload a document declaring this, signed by each of the accountable persons.</p>
-
-      <p><a href="#">Find out what information you must provide to who (opens in new tab)</a></p>
+      <div class="govuk-inset-text">
+        <p>
+          We declare that under section 89 of the Building Safety Act we have:
+        </p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>given all of the prescribed information to all of the relevant people</li>
+          <li>provisions in place to keep all of the relevant people up to date</li>
+        </ul>
+      </div>
 
       <form class="form" action="single-or-multiple-files" method="post">
 
@@ -34,12 +40,14 @@
           id: "file-upload-1",
           name: "fileUpload1",
           label: {
-            text: "Upload a file"
+            text: "Upload a declaration"
           }
         }) }}
 
         <button class="govuk-button" data-module="govuk-button">Save and continue</button>
       </form>
+
+      <p><a href="#">Find out what information you must provide to who (opens in new tab)</a></p>
 
     </div>
   </div>
