@@ -1,0 +1,59 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {% from "govuk/components/phase-banner/macro.njk" import govukPhaseBanner %}
+  {{ govukPhaseBanner({
+    tag: {
+      text: "prototype"
+    },
+    html: 'This is a new service in development - do not take anything you see here as guidance.'
+  }) }}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">What is your name?</h1>
+
+      <p>We will use this to contact you if we have questions about your application.</p>
+
+      <form class="form" action="phone" method="post">
+
+        {% from "govuk/components/input/macro.njk" import govukInput %}
+        {% from "govuk/components/fieldset/macro.njk" import govukFieldset %}
+        {% call govukFieldset({
+          hint: {
+            text: "We will use this if we need to contact you about your application."
+          }
+        }) %}
+          {{ govukInput({
+            label: {
+              text: 'First name'
+            },
+            id: "first-name",
+            name: "first-name"
+          }) }}
+          {{ govukInput({
+            label: {
+              text: 'Last name'
+            },
+            id: "last-name",
+            name: "last-name"
+          }) }}
+        {% endcall %}
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

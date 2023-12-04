@@ -1,0 +1,44 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">Confirm the information we hold about Chester House is correct
+      </h1>
+
+      <div class="govuk-inset-text">
+        You last told us about changes to the building on 7 January 2024.
+      </div>
+
+      <p>You can <a href="#">check the information BSR has and update it</a> if you need to. You must tell BSR about any changes before you apply for your building assessment certificate. When the information is updated, you can continue this application.</p>
+
+      <p>By continuing you are confirming that:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>Greenways Limited is the principal accountable person for Chester House</li>
+        <li>all the information the Building Safety Regulator (BSR) holds about Chester House is up to date</li>
+        <li>Greenways Limited understands their obligation to notify BSR of any changes to the information provided within 28 days or becoming aware of the change</li>
+      </ul>
+
+      <form class="form" action="declare-89" method="post">
+
+        {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+        <button class="govuk-button" data-module="govuk-button">Agree and continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

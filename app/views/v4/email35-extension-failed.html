@@ -1,0 +1,63 @@
+{% extends "govuk-prototype-kit/layouts/unbranded.html" %}
+
+{% block pageTitle %}
+  Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-!-padding-bottom-5"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Microsoft_Office_Outlook_%282018–present%29.svg/826px-Microsoft_Office_Outlook_%282018–present%29.svg.png" width="40px"></div>
+
+<p><strong>From:</strong> noreplyBSR@hse.gov.uk
+  <br><strong>To:</strong> Charlotte Smith
+  <br><strong>Subject:</strong> Application for extension rejected
+</p>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+{% from "govuk/components/header/macro.njk" import govukHeader %}
+{{ govukHeader({
+  homepageUrl: "#"
+}) }}
+
+<div class="govuk-!-padding-bottom-5"></div>
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <p>We have rejected your application for a 28 day extension to apply for your Building Assessment Certificate for Chester House.</p>
+
+      <h2 class="govuk-heading-m">Why we made this decision</h2>
+
+<p>We based this decision on the information you gave to us in your application.</p>
+
+<p>[Decision text inserted from D365]</p>
+
+<h2 class="govuk-heading-m">Submit your application</h2>
+
+<p>Greenways Limited must now apply for a building assessment certificate for Chester House. They must do this by 10 May 2024.</p>
+
+      <p>You can apply at: <a href="#">www.apply-for-building-assessment-certifcate.service.gov.uk</a>.</p>
+
+      <p>Your unique application reference for your building assessment certificate application is BAC123456789. Keep this safe. You'll need to enter this to access your application.</p>
+
+      <h2 class="govuk-heading-m">If you disagree with this decision</h2>
+
+<p>You can appeal the decision before [date of email + 21 days] at <a href="#">URL</a>.</p>
+
+<p>From the Health and Safety Executive</p>
+
+<p>As the Building Safety Regulator</p>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+<p>Do not reply to this email. It’s an automatic message from an unmonitored account.</p>
+
+</div>
+</div>
+
+<div style="background-color:rgb(55, 55, 89); border: 1px; width: 300px; padding: 20px; margin-bottom: 20px; margin-left: -20px;">
+  <a style="color: white;" href="confirmation-extension">Close email</a>
+</div>
+
+{% endblock %}
