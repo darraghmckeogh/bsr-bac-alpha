@@ -28,9 +28,8 @@
       <form action="" method="post">
 
     <p>
-      Upload the following documents as PDF or Word documents: 
+      Upload a PDF or Word document containing:
     </p>
-
 
     <ul class="govuk-list govuk-list--bullet">
       <li>safety case report</li>
@@ -38,25 +37,17 @@
       <li>resident engagement strategy</li>
     </ul>
 
-    <p>Each file must each be smaller than 100MB.</p>
+    <p>The file must be smaller than 100MB.</p>
 
-    <p id="upload-update" class="govuk-body govuk-!-display-none" aria-live="assertive" aria-relevant="all">1 of 2 files uploaded</p>
+    {% from "govuk/components/file-upload/macro.njk" import govukFileUpload %}
 
-    
-    <button id="upload-more" style="display:none" class="govuk-button govuk-button--secondary" data-module="govuk-button">
-      Add more files
-    </button>
-    
-    <div id="upload-wrapper" class="govuk-form-group">
-      <label class="govuk-label" for="upload-button">
-        Upload supporting information
-      </label>
-      <input class="govuk-file-upload" id="upload-button" name="upload-button" type="file" multiple="multiple">
-    </div>
-
-    <p class="govuk-body govuk-!-display-none" id="refreshPageProgress"><a href="#" class="govuk-link">Refresh page to update file upload progress</a></p>
-
-    <dl id="file-row-container" class="govuk-summary-list govuk-summary-list--long-key">
+{{ govukFileUpload({
+  id: "file-upload-1",
+  name: "fileUpload1",
+  label: {
+    text: "Upload a file"
+  }
+}) }}
 
     </dl>
 
