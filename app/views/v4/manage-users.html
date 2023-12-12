@@ -1,0 +1,56 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Content page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukPhaseBanner({
+    tag: {
+      text: "Alpha"
+    },
+    html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+  }) }}
+  {{ govukBackLink({
+    href: "building-holding-page",
+    text: "Back to building summary"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Manage who can tell us about Chester House
+      </h1>
+
+      <h2 class="govuk-heading-m">
+        Primary user
+      </h2>
+
+      <table class="govuk-table">
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">Ellie Smith</td>
+            <td class="govuk-table__cell">e.smith@greenways.co.uk</td>
+            <td class="govuk-table__cell"><a href="#">Change</a></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2 class="govuk-heading-m">
+        Secondary user
+      </h2>
+
+      <p>
+        A secondary user can access this application to tell the Building Safety Regulator about changes or apply for building assessment certificates. They cannot give access to other people and you can remove their access at any time.
+      </p>
+
+      <p><a href="#">Add a secondary user</a></p>
+
+    </div>
+  </div>
+
+{% endblock %}

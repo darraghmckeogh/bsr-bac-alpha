@@ -4,13 +4,6 @@
 Apply for a building assessment certificate for Chester House – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
-{% block beforeContent %}
-  {{ govukBackLink({
-  text: "Back",
-  href: "javascript:window.history.back()"
-}) }}
-{% endblock %}
-
 {% block content %}
 
   <div class="govuk-grid-row">
@@ -21,10 +14,12 @@ Apply for a building assessment certificate for Chester House – {{ serviceName
       <p>You must upload:</p>
 
       <ul class="govuk-list govuk-list--bullet">
-        <li>a safety case report</li>
-        <li>a mandatory occurrence reporting plan</li>
-        <li>a resident engagement strategy</li>
+        <li>safety case report</li>
+        <li>mandatory occurrence reporting system</li>
+        <li>resident engagement strategy</li>
       </ul>
+
+      <p>You may upload PDF, Word documents and images. Each file must be smaller than 100MB.</p>
 
       <form class="form" action="/single-or-multiple-files-answer" method="post">
 
@@ -46,7 +41,7 @@ Apply for a building assessment certificate for Chester House – {{ serviceName
             },
             {
               value: "two",
-              text: "Include the mandatory occrruence report in the safety case report"
+              text: "Include the mandatory occurrence reporting system in the safety case report"
             },
             {
               value: "single",
