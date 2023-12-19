@@ -1,0 +1,57 @@
+{% extends "govuk-prototype-kit/layouts/unbranded.html" %}
+
+{% block pageTitle %}
+  Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-!-padding-bottom-5"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Microsoft_Office_Outlook_%282018–present%29.svg/826px-Microsoft_Office_Outlook_%282018–present%29.svg.png" width="40px"></div>
+
+<p><strong>From:</strong> noreplyBSR@hse.gov.uk
+  <br><strong>To:</strong> Charlotte Smith
+  <br><strong>Subject:</strong> You must tell us when you have a safety case report
+</p>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+{% from "govuk/components/header/macro.njk" import govukHeader %}
+{{ govukHeader({
+  homepageUrl: "#"
+}) }}
+
+<div class="govuk-!-padding-bottom-5"></div>
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+<p>Greenways Limited is the principal accountable person for 5 buidings.</p>
+
+<h2 class="govuk-heading-m">What Greenways Limited must do</h2>
+
+<p>As set out in Part 4 of the Building Safety Act 2022, Greenways Limited must:</p>
+
+<ul class="govuk-list govuk-list--number">
+  <li>Create a safety case for each building. Find out what a safety case is at: <a href="#">https://www.gov.uk/guidance/safety-case-for-a-high-rise-residential-building</a>.</li>
+  <li>Prepare a safety case report for each building. Find out what to include in it at: <a href="#">https://www.gov.uk/guidance/preparing-a-safety-case-report</a>.</li>
+  <li>Tell the Building Safety Regulator when the safety case report for each building is ready at: <a href="#">https://www.gov.uk/guidance/register-a-high-rise-residential-building</a>.</li>
+</ul>
+
+<p>Greenways Limited do not need to upload a copy of the safety case report now. They will need to upload it when they apply for a building assessment certificate. We will send another email when they need to apply for this.</p>
+
+<p>From the Health and Safety Executive</p>
+
+<p>As the Building Safety Regulator</p>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+<p>Do not reply to this email. It’s an automatic message from an unmonitored account.</p>
+
+</div>
+</div>
+
+<div style="background-color:rgb(55, 55, 89); border: 1px; width: 300px; padding: 20px; margin-bottom: 20px; margin-left: -20px;">
+  <a style="color: white;" href="email10-advanced-warning-PNC">View next email from noreplyBSR</a>
+</div>
+
+{% endblock %}

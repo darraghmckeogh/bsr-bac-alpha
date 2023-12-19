@@ -1,13 +1,9 @@
 {% extends "layouts/main.html" %}
-{% set title = "Upload documents for Chester House" %}
+{% set title = "Upload documents for [Chester House]" %}
 {% set serviceName = "Apply for a building assessment certificate" %}
 
 {% block pageTitle %}
   {{title}} – {{ serviceName }} – GOV.UK Prototype Kit
-{% endblock %}
-
-{% block beforeContent %}
-  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
 {% endblock %}
 
 {% block content %}
@@ -55,7 +51,7 @@
     
         {{ govukButton({
           text: "Continue",
-          href: "receive-notices"
+          href: "invoice"
         }) }}
 
       </form>

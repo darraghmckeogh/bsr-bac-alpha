@@ -1,0 +1,162 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+ GOV.UK Pay
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      
+
+      <form class="form" action="confirmation" method="post">
+
+        <h1 class="govuk-heading-l">Pay</h1>
+
+        <p class="govuk-body">You can use Visa, Visa Electron or Mastercard debit and credit cards.</p>
+
+        {% from "govuk/components/table/macro.njk" import govukTable %}
+        {{ govukTable({
+          caption: "Order summary",
+          captionClasses: "govuk-table__caption--m",
+          firstCellIsHeader: true,
+          rows:
+          [
+          [
+            {
+              text: "Reference"
+            },
+            {
+              text: "Application for a building assessment certificate for Chester House"
+            }
+          ],
+            [
+              {
+                text: "Amount due now"
+              },
+              {
+                text: "£288"
+              }
+            ]
+          ]
+        }) }}
+
+          {% from "govuk/components/input/macro.njk" import govukInput %}
+          {% from "govuk/components/fieldset/macro.njk" import govukFieldset %}
+          {% call govukFieldset({
+            legend: {
+            }
+          }) %}
+            {{ govukInput({
+              label: {
+                text: 'Name on card',
+                classes: "govuk-label--s"
+              },
+              id: "address-line-1",
+              name: "address-line-1",
+              hint: {
+                text: "Your name as it appears on the front of your card"
+              }
+            }) }}
+
+            {{ govukInput({
+              label: {
+                text: 'Card number',
+                classes: "govuk-label--s"
+              },
+              classes: "govuk-input--width-20",
+              id: "address-line-2",
+              name: "address-line-2",
+              hint: {
+                text: "The long card number on the front of your card"
+              }
+            }) }}
+
+            {{ govukInput({
+              label: {
+                text: "Expiry month",
+                classes: "govuk-label--s"
+              },
+              classes: "govuk-input--width-2",
+              id: "address-town",
+              name: "address-town"
+            }) }}
+
+            {{ govukInput({
+              label: {
+                text: "Expiry year",
+                classes: "govuk-label--s"
+              },
+              classes: "govuk-input--width-4",
+              id: "address-town",
+              name: "address-town"
+            }) }}
+
+            {{ govukInput({
+              label: {
+                text: "Security code",
+                classes: "govuk-label--s"
+              },
+              classes: "govuk-input--width-3",
+              id: "address-town",
+              name: "address-town",
+              hint: {
+                text: "The 3 digit number on the back of your card"
+              }
+            }) }}
+
+            <h2 class="govuk-heading-m">Billing address</h2>
+
+            {{ govukInput({
+              label: {
+                text: "Address line 1",
+                classes: "govuk-label--s"
+              },
+              id: "billing-address-line-1",
+              name: "billing-address-line-1",
+              value: data['billing-address-line-1']
+            }) }}
+    
+            {{ govukInput({
+              label: {
+                text: "Address line 2",
+                classes: "govuk-label--s"
+              },
+              id: "billing-address-line-2",
+              name: "billing-address-line-2",
+              value: data['billing-address-line-2']
+            }) }}
+    
+            {{ govukInput({
+              label: {
+                text: "Postcode",
+                classes: "govuk-label--s"
+              },
+              classes: "govuk-input--width-10",
+              id: "billing-postcode",
+              name: "billing-postcode",
+              value: data['billing-postcode']
+            }) }}
+            
+          {% endcall %}
+
+          <p>Card information is transferred in accordance with our security statement and is held in accordance with our privacy statement. See our <a href="#">terms and conditions</a> for further information.</p>
+
+          <button class="govuk-button" data-module="govuk-button">Pay and submit</button>
+
+      
+        </div>
+      </div>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

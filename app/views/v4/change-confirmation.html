@@ -1,0 +1,41 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Application submitted – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukPhaseBanner({
+    tag: {
+      text: "Alpha"
+    },
+    html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+  }) }}
+  {{ govukBackLink({
+    href: "building-holding-page-Returning-changes-submitted",
+    text: "Back to building summary"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      {{ govukPanel({
+        titleText: "Changes to Chester House submitted",
+        html: "Application reference<br><strong>HRB123456789</strong>"
+      }) }}
+
+      <h2 class="govuk-heading-m">
+        What happens next
+      </h2>
+
+      <p>We will send you an email when we have reviewed your changes.</p>
+
+      <p>If you need to, you can <a href="change-task-list">view and update registration or structure and fire safety information</a>.</p>
+
+    </div>
+  </div>
+
+{% endblock %}

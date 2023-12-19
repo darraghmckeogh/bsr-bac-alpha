@@ -1,0 +1,89 @@
+{% extends "govuk-prototype-kit/layouts/unbranded.html" %}
+
+{% block pageTitle %}
+  Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-!-padding-bottom-5"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Microsoft_Office_Outlook_%282018–present%29.svg/826px-Microsoft_Office_Outlook_%282018–present%29.svg.png" width="40px"></div>
+
+<p><strong>From:</strong> noreplyBSR@hse.gov.uk
+  <br><strong>To:</strong> Charlotte Smith
+  <br><strong>Subject:</strong> Application for building assessment certificate for Chester House submitted
+</p>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+{% from "govuk/components/header/macro.njk" import govukHeader %}
+{{ govukHeader({
+  homepageUrl: "#"
+}) }}
+
+<div class="govuk-!-padding-bottom-5"></div>
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <p>We have recieved an application for a building assessment certificate for Chester House (HRB123456789).</p>
+
+      <p>Documents submitted:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>declaration-chester-house.pdf	</li>
+        <li>chester-house_safety-case-report(2).pdf</li>
+        <li>Mandatory-occurence-reporting-plan(Greenways ltd).docx	</li>
+        <li>RES_chester-house.docx	</li>
+      </ul>
+
+      <h2 class="govuk-heading-m">
+        What happens next
+      </h2>
+
+      <p>The application will be assigned to a case officer, who will contact Barry Moon about it soon. They might ask them for more information.</p>
+
+      <p>It may take us several months to review the application.</p>
+
+      <p>If you need to talk to someone about the application before the case officer gets in touch, contact BSR at: <a href="https://www.gov.uk/guidance/contact-the-building-safety-regulator">https://www.gov.uk/guidance/contact-the-building-safety-regulator</a>.</p>
+
+      <h2 class="govuk-heading-m">
+        Greenways Limited must pay the invoice within 30 days
+      </h2>
+
+      <p>We've sent an invoice for the application fee to charlotte.smith@greenways.co.uk. Greenways Limited must pay this by 30 May 2024.</p>
+
+      <p>The application will not be accepted as valid until this charge is paid.</p>
+
+      <p>Failure to submit a valid application is an offence under Part 4 of the Building Safety Act 2022. The Building Safety Regulator may take enforcement action if the invoice is not paid by the deadline.</p>
+
+      <p>We will send an invoice to charlotte.smith@greenways.co.uk at the start of every month to charge for the work undertaken to review the application. You can learn more about the BSR charging scheme at: <a href="https://www.hse.gov.uk/building-safety/charging-scheme.htm">https://www.hse.gov.uk/building-safety/charging-scheme.htm</a>.</p>
+
+      <h2 class="govuk-heading-m">
+        Greenways Limited must tell us each time they make changes to the safety case report
+      </h2>
+
+      <p>For example, if:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>improvement work is carried out to manage building safety risks</li>
+        <li>work on the building impacts building safety risks</li>
+      </ul>
+
+      <p>Tell us this at: <a href="#">https://www.gov.uk/guidance/register-a-high-rise-residential-building</a>.</p>
+
+<p>From the Health and Safety Executive</p>
+
+<p>As the Building Safety Regulator</p>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+<p>Do not reply to this email. It’s an automatic message from an unmonitored account.</p>
+
+</div>
+</div>
+
+<div style="background-color:rgb(55, 55, 89); border: 1px; width: 300px; padding: 20px; margin-bottom: 20px; margin-left: -20px;">
+  <a style="color: white;" href="email70-request-for-more-information">New email from noreplyBSR</a>
+</div>
+
+{% endblock %}

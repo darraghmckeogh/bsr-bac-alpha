@@ -1,0 +1,121 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Submit information – {{ serviceName }} – GOV.UK
+{% endblock %}
+
+{% block beforeContent %}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <form class="form" method="post">
+      
+<h1 class="govuk-heading-l">Submit information</h1>
+
+        <p>The Building Safety Regulator has requested additional information to support your application.
+           </p>
+           
+           <h2 class="govuk-heading-m">Requested information</h2>
+
+          <dl class="govuk-summary-list govuk-!-margin-bottom-4">
+            
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Application reference
+              </dt>
+              <dd class="govuk-summary-list__value">
+               HRB123456789
+              </dd>
+            </div>
+
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Application type
+              </dt>
+              <dd class="govuk-summary-list__value">
+               Building assessment certificate
+              </dd>
+            </div>
+
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Building name
+              </dt>
+              <dd class="govuk-summary-list__value">
+               Chester House
+              </dd>
+            </div>
+
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Request number
+              </dt>
+              <dd class="govuk-summary-list__value">
+               RMI034826381
+              </dd>
+            </div>
+
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Information requested
+              </dt>
+              <dd class="govuk-summary-list__value">
+                The safety case report you've provided does not include a site plan or floor plans. Please add these in and reupload your safety case report.
+              </dd>
+            </div>
+
+            <div class="govuk-summary-list__row">
+              <dt class="govuk-summary-list__key">
+                Due date
+              </dt>
+              <dd class="govuk-summary-list__value">
+               14 November 2023
+              </dd>
+            </div>
+            
+            </dl>
+
+            <p>If you do not submit this information by the due date, we will not be able to adequately assess your application and may consider rejecting it and taking enforcement action.</p>
+
+          <h2 class="govuk-heading-m">Upload documents</h2>
+
+          {% from "govuk/components/file-upload/macro.njk" import govukFileUpload %}
+          {{ govukFileUpload({
+            id: "constructionControlHrb",
+            name: "constructionControlHrb",
+            label: {
+              text: ""
+            },
+            hint: {
+              text: "You can upload any of the following formats: PDF, JPG, MP4, MOV or AVI. Each file must be smaller than 4GB."
+            }
+          }) }}
+
+          <h2 class="govuk-heading-m">Enter requested information</h2>
+
+          {% from "govuk/components/textarea/macro.njk" import govukTextarea %}
+          {{ govukTextarea({
+            name: "applicationStagedWorkStatementDescription",
+            id: "applicationStagedWorkStatementDescription",
+            label: {
+              text: "",
+              classes: "govuk-label--l",
+              isPageHeading: true
+            },
+            hint: {
+              text: "
+              If you have been asked for more information to support your application, enter it here:"
+            }
+          }) }}
+
+        <a href="more-information-confirmation" class="govuk-button">Submit</a>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

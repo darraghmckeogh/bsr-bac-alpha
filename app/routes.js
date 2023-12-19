@@ -327,7 +327,6 @@ router.post('/already-provided-all-answer', function (req, res) {
   
   })
 
-    */
 
 
   // V4
@@ -337,8 +336,10 @@ router.post('/already-provided-all-answer', function (req, res) {
     var connectedBuildings = req.session.data['single-or-multiple-files']
     if (connectedBuildings == "multiple") {
       res.redirect('/v4/upload-scr')
-    } else if (connectedBuildings == "two") {
+    } else if (connectedBuildings == "mor-in-scr") {
       res.redirect('/v4/upload-mor-in-scr')
+    } else if (connectedBuildings == "res-in-scr") {
+      res.redirect('/v4/upload-res-in-scr')
     } else if (connectedBuildings == "single") {
       res.redirect('/v4/upload-all')
     }
@@ -428,6 +429,114 @@ router.post('/already-provided-all-answer', function (req, res) {
       res.redirect('/v4/check-answers')
     } else {
       res.redirect('/v4/enforcement-action-details')
+    }
+  
+  })
+
+  */
+
+
+
+  // V5
+
+  router.post('/single-or-multiple-files-answer', function (req, res) {
+
+    var connectedBuildings = req.session.data['single-or-multiple-files']
+    if (connectedBuildings == "multiple") {
+      res.redirect('/v5/upload-scr')
+    } else if (connectedBuildings == "mor-in-scr") {
+      res.redirect('/v5/upload-mor-in-scr')
+    } else if (connectedBuildings == "res-in-scr") {
+      res.redirect('/v5/upload-res-in-scr')
+    } else if (connectedBuildings == "single") {
+      res.redirect('/v5/upload-all')
+    }
+  
+  })
+
+
+router.post('/already-provided-res-answer', function (req, res) {
+
+    var resDoc = req.session.data['already-provided-res']
+    if (resDoc == "yes") {
+      res.redirect('/v5/already-provided-res-explanation')
+    } else {
+      res.redirect('/v5/upload-mor')
+    }
+  
+  })
+
+
+router.post('/already-provided-mor-answer', function (req, res) {
+
+    var morDoc = req.session.data['already-provided-mor']
+    var resRequired = req.session.data['single-or-multiple-files']
+    if (morDoc == "yes") {
+      res.redirect('/v5/already-provided-mor-explanation')
+    } else if (resRequired == "single") {
+      res.redirect('/v5/recieve-notices')
+    } else {
+      res.redirect('/v5/upload-res')
+    }
+    
+  })
+
+
+  router.post('/already-provided-mor-explanation-answer', function (req, res) {
+
+    var resRequired = req.session.data['single-or-multiple-files']
+    if (resRequired == "single") {
+      res.redirect('/v5/recieve-notices')
+    } else {
+      res.redirect('/v5/upload-res')
+    }
+  
+  })
+
+
+router.post('/already-provided-all-answer', function (req, res) {
+
+    var allDocs = req.session.data['already-provided-all']
+    if (allDocs == "yes") {
+      res.redirect('/v5/already-provided-all-explanation')
+    } else {
+      res.redirect('/v5/receive-notices')
+    }
+  
+  })
+
+
+  router.post('/payment-method-answer', function (req, res) {
+
+    var paymentMethod = req.session.data['payment-method']
+    if (paymentMethod == "card") {
+      res.redirect('/v5/card-payment')
+    } else {
+      res.redirect('/v5/confirmation')
+    }
+  
+  })
+
+
+  router.post('/subject-to-licensing-answer', function (req, res) {
+
+    var subjectToLicensing = req.session.data['subject-to-licensing']
+    if (subjectToLicensing == "yes") {
+      res.redirect('/v5/is-it-licensed')
+    } else {
+      res.redirect('/v5/enforcement-action')
+    }
+  
+  })
+
+
+  router.post('/enforcement-action-answer', function (req, res) {
+
+    var enforcementAction = req.session.data['enforcement-action']
+    if (enforcementAction == "No") {
+      res.redirect('/v5/check-answers')
+    } else {
+      res.redirect('/v5/enforcement-action-details')
     }
   
   })

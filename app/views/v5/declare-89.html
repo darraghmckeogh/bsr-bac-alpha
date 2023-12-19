@@ -1,0 +1,38 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Declaration – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Confirm the relevant people are being kept up to date
+      </h1>
+
+      <p>
+        By continuing you are stating that all of the accountable persons for Chester House are fulfilling their duty to provide all of the prescribed information to:
+      </p>
+
+      <uL class="govuk-list govuk-list--bullet">
+        <li>the Building Safety Regulator</li>
+        <li>any other accountable persons</li>
+        <li>residents</li>
+        <li>owners of the residential units</li>
+        <li>any other prescribed person, for example the client or the fire and rescue authority</li>
+      </uL>
+
+      <form class="form" action="upload-89" method="post">
+
+        <button class="govuk-button" data-module="govuk-button">Agree and continue</button>
+      </form>
+
+      <p><a href="#">Find out what information you must provide to each of these people (opens in new tab)</a></p>
+
+    </div>
+  </div>
+
+{% endblock %}
