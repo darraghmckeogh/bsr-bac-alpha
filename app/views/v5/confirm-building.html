@@ -4,6 +4,19 @@
   Question page template – {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
+{% block beforeContent %}
+  {{ govukPhaseBanner({
+    tag: {
+      text: "Alpha"
+    },
+    html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+  }) }}
+  {{ govukBackLink({
+    href: "building-holding-page",
+    text: "Back to building summary"
+  }) }}
+{% endblock %}
+
 {% block content %}
 
   <div class="govuk-grid-row">
