@@ -1,0 +1,131 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Chester House – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukPhaseBanner({
+    tag: {
+      text: "Alpha"
+    },
+    html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-l">HRB123456789</span>
+
+      <h1 class="govuk-heading-l">Chester House</h1>
+
+      <h2 class="govuk-heading-m">
+        Building assessment certificate
+      </h2>
+
+      <p>We granted a building assessment certificate for Chester House on 12 June 2024.</p>
+
+      <p>You must <a href="#">download your building assessment certificate</a>, print it and display it in the building where residents can see it.</p>
+
+      {% from "govuk/components/warning-text/macro.njk" import govukWarningText %}
+
+      {{ govukWarningText({
+        text: "Failure to display your building assessment certificate is an offence under Part 4 of the Building Safety Act. If you do not display the certificate, the Building Safety Regulator may take enforcement action.",
+        iconFallbackText: "Warning"
+      }) }}
+
+      <p>The certificate is valid until we direct you to apply for another one. We will do this within the next 5 years.</p>
+
+    <h2 class="govuk-heading-m">
+      Registration
+    </h2>
+
+      <p>
+        We’ve approved the latest changes submitted on 20 January 2024.
+      </p>
+
+      <p>
+        You can <a href="#">view and update registration or structure and fire safety information</a>.
+      </p>
+
+      <p>
+        If it is no longer a high-rise residential building, you can <a href="#">ask to remove this building from the register</a>.
+      </p>
+
+      <h2 class="govuk-heading-m">
+        Safety case report
+      </h2>
+
+      <p>
+        <a href="#">Tell us when the safety case report gets updated</a>.  For example, if:
+      </p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>improvement work is carried out to manage building safety risks</li>
+        <li>work on the building impacts building safety risks</li>
+      </ul>
+
+      <h2 class="govuk-heading-m">
+        Access to this application
+      </h2>
+
+      <p>
+        <a href="#">Manage who can use this service</a>
+      </p>
+
+    </div>
+  </div>
+
+  <!--
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-l">HRB123456789</span>
+
+      <h1 class="govuk-heading-l">Chester House</h1>
+
+      </div>
+    </div>
+
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-one-third">
+  
+        <a class="govuk-heading-m" href="#">
+          Information about Point House
+        </a>
+  
+        <p>
+          View, provide or update registration or structure and safety information. Tell us when you update your safety case report, or remove the building from the register.
+        </p>
+  
+      </div>
+      <div class="govuk-grid-column-one-third">
+  
+        <a class="govuk-heading-m" href="#">
+          Building assessment certificate
+        </a>
+  
+        <p>
+          Apply for a building assessment certificate or download your certificates.
+        </p>
+  
+      </div>
+      <div class="govuk-grid-column-one-third">
+  
+        <a class="govuk-heading-m" href="#">
+          Access to this application
+        </a>
+  
+        <p>Change who can use this service or add a second user.</p>
+  
+      </div>
+
+    </div>
+
+    -->
+
+{% endblock %}

@@ -1,0 +1,71 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Application fee – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">Application charge</h1>
+
+      <div class="govuk-info-banner govuk-!-margin-bottom-5" style="
+      background: rgb(243, 242, 241); padding: 20px; border-top: 2px solid rgb(53, 110, 181);">
+      <h2 class="govuk-heading-m">Payment summary</h2>
+      <p>Amount due now:</p>
+      <govuk-body class="govuk-payment-amount">
+        <p class="govuk-body govuk-payment-amount" style="font-size: 36px; font-weight: bold;">£288</p>
+        <p>This charge covers...</p>
+        <p>Your application will not be accepted as valid until you have paid this charge.</p>
+        <p>The ongoing charges will cover any other work we do to review your application.</p>
+    </govuk-body>
+    </div>
+
+      <form class="form" action="/payment-method-answer" method="post">
+
+        {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+        {{ govukRadios({
+          name: "payment-method",
+          fieldset: {
+            legend: {
+              text: "How do you want to pay the application charge?",
+              isPageHeading: false,
+              classes: "govuk-fieldset__legend--s"
+            }
+          },
+          items: [
+            {
+              value: "card",
+              text: "Debit or credit card"
+            },
+            {
+              value: "invoice",
+              text: "Invoice and bank transfer",
+              hint: {
+                text: "We'll send you an invoice. You must pay it within 30 days."
+              }
+            }
+          ]
+        }) }}
+
+        <div class="govuk-button-group">
+          {{ govukButton({
+            text: "Save and continue"
+          }) }}
+        
+          {{ govukButton({
+            text: "Save and come back later",
+            classes: "govuk-button--secondary",
+            href: "building-holding-page-Returning"
+          }) }}
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

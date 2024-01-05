@@ -1,0 +1,34 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="javascript:window.history.back()">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">The information BSR holds about Chester House is not correct
+      </h1>
+
+      if in a new service
+
+      <p>Before you can apply for a building assessment certificate, you must update the information we hold.</p>
+
+      <p>You must <a href="#">return to your registration application</a> to do this.</p>
+
+      if in the same service
+
+      <p>Before you can apply for a building assessment certificate, you must <a href="#">tell BSR about changes</a>.</p>
+
+      <p><a href="#">I have updated the information the BSR hold</a></p>
+
+    </div>
+  </div>
+
+{% endblock %}

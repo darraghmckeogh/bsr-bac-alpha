@@ -1,0 +1,74 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Apply for a building assessment certificate for Chester House – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">Upload documents for [Chester House]</h1>
+
+      <p>You must upload:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>safety case report (SCR)</li>
+        <li>mandatory occurrence reporting system (MOR)</li>
+        <li>resident engagement strategy (RES)</li>
+      </ul>
+
+      <p>You can upload PDF, Word documents and images. Each file must be smaller than 100MB.</p>
+
+      <form class="form" action="/single-or-multiple-files-answer" method="post">
+
+        {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+        {{ govukRadios({
+          name: "single-or-multiple-files",
+          fieldset: {
+            legend: {
+              text: "How do you want to supply them?",
+              isPageHeading: false,
+              classes: "govuk-fieldset__legend--s"
+            }
+          },
+          items: [
+            {
+              value: "multiple",
+              text: "Each as different files"
+            },
+            {
+              value: "mor-in-scr",
+              text: "Include the MOR in the SCR, with the RES as a separate file"
+            },
+            {
+              value: "res-in-scr",
+              text: "Include the RES in the SCR, with the MOR as a separate file"
+            },
+            {
+              value: "single",
+              text: "All in one file"
+            }
+          ]
+        }) }}
+
+        <div class="govuk-button-group">
+          {{ govukButton({
+            text: "Save and continue"
+          }) }}
+        
+          {{ govukButton({
+            text: "Save and come back later",
+            classes: "govuk-button--secondary",
+            href: "building-holding-page-Returning"
+          }) }}
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

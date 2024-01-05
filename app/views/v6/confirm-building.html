@@ -1,0 +1,40 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">Is this the correct building?
+      </h1>
+
+      <div class="govuk-inset-text">
+        HRB123456789
+        <br>
+        <br>Chester House
+        <br>
+        <br>East Tower
+        <br>11 Example Street
+        <br>Leeds
+        <br>LE3 5GH
+        <br>
+        <br>West Tower
+        <br>12 Example Street
+        <br>Leeds
+        <br>LE3 5GI
+      </div>
+
+      <form class="form" action="confirm-pap-and-changes-same-service" method="post">
+
+        <button class="govuk-button" data-module="govuk-button">Confirm</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

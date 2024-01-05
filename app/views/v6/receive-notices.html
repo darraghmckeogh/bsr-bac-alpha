@@ -1,0 +1,55 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Apply for a building assessment certificate for Chester House – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="invoice" method="post">
+
+        {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+        {{ govukRadios({
+          name: "notices",
+          fieldset: {
+            legend: {
+              text: "Does [Greenways Limited/Andy Smith] consent to being served legal enforcement documents by email?",
+              isPageHeading: true,
+              classes: "govuk-fieldset__legend--l"
+            }
+          },
+          hint: {
+            text: "The Building Safety Regulator may in certain circumstances find it necessary to serve you with a formal notice under Part 4 the Building Safety Act 2022."
+          },
+          items: [
+            {
+              value: "multiple",
+              text: "Yes - send notices via email",
+              hint: {
+                text: "We will send them to you [(if user is not the PAP/PAP named contact)and [the named contact at Greenways Limited/Andy Smith]"
+              }
+            },
+            {
+              value: "single",
+              text: "No - send notices by post",
+              hint: {
+                text: "We will send them to the address we have for [Greenways Limited/Andy Smith]"
+              }
+            }
+          ]
+        }) }}
+
+        {{ govukButton({
+          text: "Save and continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,57 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Declaration – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Upload a demonstration that all of the accountable persons are keeping all of the relevant people up to date
+      </h1>
+
+      <p>It must be signed by each of the accountable persons stating:</p>
+
+      <div class="govuk-inset-text">
+        <p>
+          Under section 89 of the Building Safety Act we have:
+        </p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>given all of the prescribed information to all of the relevant people</li>
+          <li>provisions in place to keep all of the relevant people up to date</li>
+        </ul>
+      </div>
+
+      <form class="form" action="upload-all" method="post">
+
+        {% from "govuk/components/file-upload/macro.njk" import govukFileUpload %}
+
+        {{ govukFileUpload({
+          id: "file-upload-1",
+          name: "fileUpload1",
+          label: {
+            text: "Upload demonstration"
+          }
+        }) }}
+
+        <div class="govuk-button-group">
+          {{ govukButton({
+            text: "Save and continue"
+          }) }}
+        
+          {{ govukButton({
+            text: "Save and come back later",
+            classes: "govuk-button--secondary",
+            href: "building-holding-page-Returning"
+          }) }}
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

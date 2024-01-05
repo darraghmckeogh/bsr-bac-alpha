@@ -1,0 +1,140 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+{{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block header %}
+  <!-- Blank header with no service name for the start page -->
+  {{ govukHeader() }}
+{% endblock %}
+
+{% block beforeContent %}
+
+  {{ govukBreadcrumbs({
+    items: [
+      {
+        text: "Home",
+        href: "#"
+      },
+      {
+        text: "Housing, local and community",
+        href: "#"
+      },
+      {
+        text: "Planning and building",
+        href: "#"
+      },
+      {
+        text: "Building regulation",
+        href: "#"
+      }
+    ]
+  }) }}
+
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Apply for a building assessment certificate
+      </h1>
+
+      <p>If your organisation is the principal accountable person for a building, or the principal accountable person has authorised you to act for them, you can use this service to:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>apply for a building assessment certificate</li>
+        <li>tell the Building Safety Regulator when they have or change a safety case report</li>
+      </ul>
+
+      <p>The Building Safety Regulator will tell you when you need to apply for a building assessment certificate. You can only apply when BSR directs you to.</p>
+
+      <p>It is the duty of the principal accountable person to ensure the application is submitted within 28 days of being directed by email to apply.</p>
+
+      <h2 class="govuk-heading-m">What you will need</h2>
+
+      <p>You will need to upload:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>safety case report</li>
+        <li>an outline of your mandatory occurrence reporting system</li>
+        <li>resident engagement strategy</li>
+      </ul>
+
+      <p>You will need to declare that you are keeping all of the relevant people, such as other accountable persons, up to date.</p>
+
+      <p>You will need to provide details so we can send you invoices. You will be charged for the work undertaken to assess your application.</p>
+
+      <p>You will also need to pay the application charge of £288. You can pay this by card or invoice. Your application will not be accepted as valid until you have paid this charge.</p>
+
+      <p>Find out more about the <a href="#">Building Safety Regulator charging scheme</a>.</p>
+
+      {{ govukButton({
+        text: "Start now",
+        href: "access-an-application",
+        isStartButton: true
+      }) }}
+
+      <div class="govuk-warning-text">
+        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+        <strong class="govuk-warning-text__text">
+          <span class="govuk-warning-text__assistive">Warning</span>
+          Failure to submit an application within 28 days of being directed to apply is an offence under Part 4 of the Building Safety Act 2022. If this happens, the Building Safety Regulator may take enforcement action.
+        </strong>
+      </div>
+
+      <h2 class="govuk-heading-m">
+        Before you start
+      </h2>
+
+      <p>
+        If you need help using this service <a href="https://www.gov.uk/guidance/contact-the-building-safety-regulator">contact us</a>.
+      </p>
+
+      <h2 class="govuk-heading-m">After you have submitted</h2>
+
+      <p>Once you have submitted your application, it will be assigned to a case officer who will contact you. It will take some time to review it. If we are not satisfied with your application, we will contact you to ask for more information.</p>
+
+      <p>If you're granted a building assessment certificate, you will be able to download it. You must print it and display it somewhere in the building where residents will see it.</p>
+
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+
+      <aside class="govuk-prototype-kit-common-templates-related-items" role="complementary">
+        <h2 class="govuk-heading-m" id="subsection-title">
+          Related guidance
+        </h2>
+        <nav role="navigation" aria-labelledby="subsection-title">
+          <ul class="govuk-list govuk-!-font-size-16">
+            <li>
+              <a href="#">
+                Applying for a building assessment certificate
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Safety case reports
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Mandatory occrruence reporting
+              </a>
+            </li>
+            <li>
+              <a href="#" class="govuk-!-font-weight-bold">
+                More <span class="govuk-visually-hidden">in Related guidance</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+    </div>
+  </div>
+
+{% endblock %}

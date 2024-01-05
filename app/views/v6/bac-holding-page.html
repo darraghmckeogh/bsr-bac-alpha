@@ -1,0 +1,29 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Building assessment certificate for Chester House – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">Building assessment certificate for Chester House</h1>
+
+      <p>
+        You must <a href="confirm-building">apply for a building assessment certificate</a> by 28 April 2024.
+      </p>
+
+      <div class="govuk-warning-text">
+        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+        <strong class="govuk-warning-text__text">
+          <span class="govuk-warning-text__assistive">Warning</span>
+          Failure to submit an application in time is an offence under Part 4 of the Building Safety Act 2022. If [Greenways Limited/you] do[es] not apply by the deadline, the Building Safety Regulator may take enforcement action.
+        </strong>
+      </div>
+
+    </div>
+  </div>
+
+{% endblock %}

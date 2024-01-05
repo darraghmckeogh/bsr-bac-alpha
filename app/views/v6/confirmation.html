@@ -1,0 +1,63 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Application submitted – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukPhaseBanner({
+    tag: {
+      text: "Alpha"
+    },
+    html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+  }) }}
+  {{ govukBackLink({
+    href: "building-holding-page-assessing",
+    text: "Back to building summary"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      {{ govukPanel({
+        titleText: "Application for building assessment certificate for [Chester House] submitted",
+        html: "Application reference<br><strong>[HRB123456789]</strong>"
+      }) }}
+
+      <p>
+        We have sent you a confirmation email. [We have also sent a confirmation email to [PAP/PAP named contact email]].
+      </p>
+
+      <h2 class="govuk-heading-m">
+        What happens next
+      </h2>
+
+      <p>Your application will be assigned to a case officer, who will contact you about your application soon. They might ask you for more information.</p>
+
+      <p>It may take us several months to review your application.</p>
+
+      <p>If you need to talk to someone about your application before the case officer gets in touch with you, <a href="https://www.gov.uk/guidance/contact-the-building-safety-regulator">contact BSR</a>.</p>
+
+      <h2 class="govuk-heading-m">
+        [[Greenways Limited/Andy Smith] must pay the invoice within 30 days
+      </h2>
+
+      <p>We've sent an invoice for the application fee to [charlotte.smith@greenways.co.uk]. [Greenways Limited/Andy Smith] must pay this by [30 May 2024].</p>
+
+      <p>The application will not be accepted as valid until this charge is paid.</p>
+
+      <p>Failure to submit a valid application is an offence under Part 4 of the Building Safety Act 2022. The Building Safety Regulator may take enforcement action if the invoice is not paid by the deadline.]</p>
+
+      <p>We will send an invoice to [charlotte.smith@greenways.co.uk] at the start of every month to charge for the work undertaken to review the application. You can <a href="https://consultations.hse.gov.uk/bsr/fees-and-charges-regs/results/consultation-response-fees-and-charges-regulations-august-2023.pdf">learn more about the BSR charging scheme</a>.</p>
+
+    </div>
+  </div>
+
+  <div style="background-color:rgb(55, 55, 89); border: 1px; width: 300px; padding: 20px; margin-bottom: 20px; margin-left: -20px;">
+    <a style="color: white;" href="email65-submitted">New email from noreplyBSR</a>
+  </div>
+
+{% endblock %}
