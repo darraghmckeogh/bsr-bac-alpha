@@ -1,0 +1,161 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Check your answers – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds-from-desktop">
+
+      <h1 class="govuk-heading-l">
+        Check your answers
+      </h1>
+
+      {{ govukSummaryList({
+        rows: [
+          {
+            key: {
+              text: "Compliance notices currently in force"
+            },
+            value: {
+              text: "Not provided"
+            },
+            actions: {
+              items: [
+                {
+                  href: "enforcement-action-details",
+                  text: "Change",
+                  visuallyHiddenText: "Compliance notices currently in force"
+                }
+              ]
+            }
+          }
+          ,
+          {
+            key: {
+              text: "Upload documents"
+            },
+            value: {
+              text: "chester-house_safety-case-report(2).pdf"
+            },
+            actions: {
+              items: [
+                {
+                  href: "single-or-multiple-files",
+                  text: "Change",
+                  visuallyHiddenText: "Upload safety case report"
+                }
+              ]
+            }
+          }
+        ]
+      }) }}
+
+      <h2 class="govuk-heading-m">Invoicing details for ongoing charges</h2>
+
+      {{ govukSummaryList({
+        rows: [
+          {
+            key: {
+              text: "Name on the invoice"
+            },
+            value: {
+              text: "Charlotte Smith"
+            },
+            actions: {
+              items: [
+                {
+                  href: "invoice",
+                  text: "Change",
+                  visuallyHiddenText: "Name on the invoice"
+                }
+              ]
+            }
+          }
+          ,
+          {
+            key: {
+              text: "Email address"
+            },
+            value: {
+              text: "charlotte.smith@greenways.co.uk"
+            },
+            actions: {
+              items: [
+                {
+                  href: "invoice",
+                  text: "Change",
+                  visuallyHiddenText: "Email address"
+                }
+              ]
+            }
+          }
+          ,
+          {
+            key: {
+              text: "Billing address"
+            },
+            value: {
+              text: "111 Arndale Avenue, Manchester, M2 7BA"
+            },
+            actions: {
+              items: [
+                {
+                  href: "invoice",
+                  text: "Change",
+                  visuallyHiddenText: "Billing address"
+                }
+              ]
+            }
+          }
+          ,
+          {
+            key: {
+              text: "Do you need a purchase order number?"
+            },
+            value: {
+              text: "Yes - I have a purchase order number"
+            },
+            actions: {
+              items: [
+                {
+                  href: "invoice",
+                  text: "Change",
+                  visuallyHiddenText: "Do you need a purchase order number?"
+                }
+              ]
+            }
+          }
+          ,
+          {
+            key: {
+              text: "Purchase order number"
+            },
+            value: {
+              text: "PO1245821"
+            },
+            actions: {
+              items: [
+                {
+                  href: "invoice",
+                  text: "Change",
+                  visuallyHiddenText: "Purchase order number"
+                }
+              ]
+            }
+          }
+        ]
+      }) }}
+
+      <form action="declare" method="post" novalidate>
+
+        {{ govukButton({
+          text: "Continue"
+        }) }}
+
+      </form>
+
+    </div>
+  </div>
+{% endblock %}

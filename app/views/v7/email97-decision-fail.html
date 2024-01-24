@@ -1,0 +1,93 @@
+{% extends "govuk-prototype-kit/layouts/unbranded.html" %}
+
+{% block pageTitle %}
+  Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-!-padding-bottom-5"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Microsoft_Office_Outlook_%282018–present%29.svg/826px-Microsoft_Office_Outlook_%282018–present%29.svg.png" width="40px"></div>
+
+<p><strong>From:</strong> noreplyBSR@hse.gov.uk
+  <br><strong>To:</strong> Charlotte Smith
+  <br><strong>Subject:</strong> Building assessment certificate application for Chester House refused
+</p>
+
+<div style="background-color:rgb(236, 236, 236); border: 1px; width: 300px; padding: 20px; margin-bottom: 20px;">
+  <a href="#">Building-Assessment-Certificate_Legal-Notice_Chester-House.pdf</a>
+</div>
+
+<div style="background-color:rgb(236, 236, 236); border: 1px; width: 300px; padding: 20px; margin-bottom: 20px;">
+  <a href="#">BSR_Request-For-Review.pdf</a>
+</div>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+{% from "govuk/components/header/macro.njk" import govukHeader %}
+{{ govukHeader({
+  homepageUrl: "#"
+}) }}
+
+<div class="govuk-!-padding-bottom-5"></div>
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+<p>We have refused the application for a building assessment certificate for [Chester House]. The reasons for refusal are attached to this email.</p>
+
+<h2 class="govuk-heading-m">Compliance notice - to be displayed in the building</h2>
+
+<p>It is an offence not to have a building assessment certificate under the Building Safety Act 2022.</p>
+
+<p>We have attached a compliance notice to this email, which details what you need to do to comply.</p>
+
+<p>[Greenways Limited/Andy Smith] must display a copy of the compliance notice in the building. Failure to do so is an offence, and the BSR may take enforcement action.</p>
+
+<p>If you disagree with our decision, you can appeal the compliance notice. Details of how to do this are in the notice.</p>
+
+<h2 class="govuk-heading-m">Request a review of this decision</h2>
+
+<p>If you disagree with our decision, you can request we review it.</p>
+
+<p>You can only request a review if:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li>the decision was based on an error of fact</li>
+  <li>the decision was wrong in law</li>
+  <li>the decision was unreasonable</li>
+</ul>
+
+<p>We’ve attached a PDF form for you to complete if you want to request a review.</p>
+
+<p>When you have completed the form, you should upload it to us within 21 days of us sending this email. These 21 days include Saturdays and Sundays, but not public holidays.</p>
+
+<p>You must also pay £288 to submit your request. You will be charged further for time we spend working on your review. You will not be charged for our time spent on the review if we reverse our decision, and your fee will be refunded.</p>
+
+<p>The form includes instructions on how to complete it, how to make a payment, and how to upload it to us.</p>
+
+<p>We recommend that you make your request by uploading this form. It is more secure and easier for our team to process than a postal submission. Do not email your form to us.</p>
+
+<p>If you need help, then contact us <a href="#">www.gov.uk/contact-building-safety-regulator</a>, quoting your application reference number HRB123456789.</p>
+
+<h2 class="govuk-heading-m">What happens next</h2>
+
+<p>When we receive your request for a decision review, we will make our decision within [28 days].</p>
+
+<p>In the unlikely event that you do not hear from us within [28 days] contact BSR <a href="#">www.gov.uk/contact-building-safety-regulator</a> quoting your reference number.</p>
+
+<p>You can appeal to a First-tier Tribunal if you still disagree with our decision after we’ve reviewed it. However, you cannot appeal to the Tribunal without first having the decision reviewed.</p>
+
+<p>You will be sent another email directing you to reapply soon.</p>
+
+<p>From the Health and Safety Executive</p>
+
+<p>As the Building Safety Regulator</p>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+<p>Do not reply to this email. It’s an automatic message from an unmonitored account.</p>
+
+</div>
+</div>
+
+{% endblock %}

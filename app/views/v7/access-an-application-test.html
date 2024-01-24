@@ -1,0 +1,111 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Access an application – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">Access an application</h1>
+
+      <form class="form" action="/access-an-application-answer" method="post">
+
+        {% from "govuk/components/input/macro.njk" import govukInput %}
+
+        {% if (data['email'] == "") %}
+
+        {{ govukInput({
+          label: {
+            text: "Email address",
+            classes: "govuk-label--s",
+            isPageHeading: false
+          },
+          id: "email",
+          name: "email",
+          value: data['email'],
+          errorMessage: {
+            text: "Enter an email address"
+          }
+        }) }}
+
+        {% elseif (data['email'] == "darragh.mckeogh@company.com") and (data['application-reference'] == "HRB123456788") %}
+
+        {{ govukInput({
+          label: {
+            text: "Email address",
+            classes: "govuk-label--s",
+            isPageHeading: false
+          },
+          id: "email",
+          name: "email",
+          value: data['email'],
+          errorMessage: {
+            text: "Email address doesn't match this application reference. Enter the correct email address."
+          }
+        }) }}
+
+        {% else %}
+
+        {{ govukInput({
+          label: {
+            text: "Email address",
+            classes: "govuk-label--s",
+            isPageHeading: false
+          },
+          id: "email",
+          name: "email",
+          value: data['email']
+        }) }}
+
+        {% endif %}
+
+        {% if (data['application-reference'] == "") %}
+
+        {{ govukInput({
+          label: {
+            text: "Application reference",
+            classes: "govuk-label--s",
+            isPageHeading: false
+          },
+          hint: {
+            text: "For example, 'HRB123456789'"
+          },
+          id: "application-reference",
+          classes: "govuk-input--width-20",
+          name: "application-reference",
+          value: data['application-reference'],
+          errorMessage: {
+            text: "Enter the buildings application reference"
+          }
+        }) }}
+
+        {% else %}
+
+        {{ govukInput({
+          label: {
+            text: "Application reference",
+            classes: "govuk-label--s",
+            isPageHeading: false
+          },
+          hint: {
+            text: "For example, 'HRB123456789'"
+          },
+          id: "application-reference",
+          classes: "govuk-input--width-20",
+          name: "application-reference",
+          value: data['application-reference']
+        }) }}
+
+        {% endif %}
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

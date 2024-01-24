@@ -9,17 +9,16 @@ Charges for applying – {{ serviceName }} – GOV.UK
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
 
-      <h1 class="govuk-heading-l">Charges for assessing your BAC application</h1>
+      <h1 class="govuk-heading-l">Enter invoice details for the application charge</h1>
 
-      <p>You will be asked to pay an initial application charge of £288 to accompany your application for a Building Assessment Certificate (BAC). You can choose to pay this either by card or invoice.</p>
+      <form class="form" action="confirmation" method="post">
 
-      <p>The assessment of your BAC application will incur further ongoing charges. The BSR will charge you £144 per person for every hour we spend assessing your application. We will also charge you for time spent by other relevant authorities or third parties assessing your BAC application. We’ll send a monthly invoice by email for these charges and therefore require your invoice details.</p>
-
-      <p>As the Principal Accountable Person please provide us with a contact who you want to receive and pay the invoices on your behalf.</p>
-
-      <form class="form" action="check-answers" method="post">
-
-        <h2 class="govuk-heading-m">Enter invoice details</h2>
+        <div class="govuk-info-banner govuk-!-margin-bottom-5" style="
+          background: rgb(243, 242, 241); padding: 20px; border-top: 2px solid rgb(53, 110, 181);">
+          <h2 class="govuk-heading-m">Payment summary</h2>
+          <p>Amount due now:</p>
+          <p class="govuk-body govuk-payment-amount" style="font-size: 36px; font-weight: bold;">£288</p>
+        </div>
 
       <h3 class="govuk-heading-s">Contact details</h3>
 
@@ -45,7 +44,7 @@ Charges for applying – {{ serviceName }} – GOV.UK
             text: "Email address"
           },
           hint: {
-            text: "We'll only use this to send you invoices. We will share this with the principal accountable person so they know where the invoices will be sent to."
+            text: "We'll only use this to send you invoices. It will appear on your confirmation email."
           },
           id: "invoiceEmail",
           name: "invoiceEmail",
@@ -165,6 +164,8 @@ Charges for applying – {{ serviceName }} – GOV.UK
 {{ govukInput({
   id: "contact-by-email",
   name: "contactByEmail",
+  type: "email",
+  autocomplete: "email",
   spellcheck: false,
   classes: "govuk-!-width-two-thirds",
   label: {
@@ -178,7 +179,7 @@ Charges for applying – {{ serviceName }} – GOV.UK
   name: "contact",
   fieldset: {
     legend: {
-      text: "Do you need a purchase order number on the invoices?",
+      text: "Do you need a purchase order number on the invoice?",
       isPageHeading: true,
       classes: "govuk-body"
     }

@@ -539,7 +539,7 @@ router.post('/already-provided-all-answer', function (req, res) {
   
   })
 
-  */
+  
 
 
   // V6
@@ -642,6 +642,36 @@ router.post('/already-provided-all-answer', function (req, res) {
       res.redirect('/v6/check-answers')
     } else {
       res.redirect('/v6/enforcement-action-details')
+    }
+  
+  })
+
+  */
+
+
+
+  // V7
+
+  router.post('/access-an-application-answer', function (req, res) {
+
+    var email = req.session.data['email']
+    var appRef = req.session.data['application-reference']
+    if (email == "" || email == "darragh.mckeogh@company.com" || appRef == "") {
+      res.redirect('/v7/access-an-application-test')
+    } else {
+      res.redirect('/v7/security-code')
+    }
+  
+  })
+
+
+  router.post('/payment-method-answer', function (req, res) {
+
+    var paymentMethod = req.session.data['payment-method']
+    if (paymentMethod == "card") {
+      res.redirect('/v7/card-payment')
+    } else {
+      res.redirect('/v7/same-invoice')
     }
   
   })

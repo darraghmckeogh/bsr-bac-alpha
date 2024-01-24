@@ -1,0 +1,92 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Declaration – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">
+        Confirm the relevant people are being provided with information
+      </h1>
+
+      <p>As part of your building assessment certificate application for Chester House, you are required as the principal accountable person to confirm that all accountable persons (APs) for Chester House have met the following duties. You will need to liaise with all APs to ensure that they are aware of what they need to do and have complied. </p>
+
+      <p>You and any other APs for Chester House are required to give information to:</p>
+
+      <uL class="govuk-list govuk-list--bullet">
+        <li>the Building Safety Regulator</li>
+        <li>any other accountable persons for the building</li>
+        <li>residents of the building</li>
+        <li>owners of the residential units in the building</li>
+        <li>any other persons including a relevant landlord, client, relevant responsible person, fire & rescue authority</li>
+      </uL>
+
+      <p>You are required to give them information on:</p>
+
+      <uL class="govuk-list govuk-list--bullet">
+        <li>change of AP</li>
+        <li>resident engagement</li>
+        <li>requests for further information</li>
+      </uL>
+
+      <p>If you need to, you can <a href="#">find out what information APs need to give to the persons listed above (opens in a new tab)</a>.</p>
+
+      <p>Every AP for Chester House has the same duty to give this information.</p>
+
+      <p>As the PAP you are required as part of the BAC application to make a statement confirming that you and any other APs for Chester House have given the required information to all persons as listed above.</p>
+
+      <p>As the principal accountable person for:</p>
+
+      <table class="govuk-table">
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Building Registration Number</th>
+            <td class="govuk-table__cell">HRB123456789</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Building Name and Address</th>
+            <td class="govuk-table__cell">Chester House
+              <br>
+              <br>East Tower
+              <br>11 Example Street
+              <br>Leeds
+              <br>LE3 5GH
+              <br>
+              <br>West Tower
+              <br>12 Example Street
+              <br>Leeds
+              <br>LE3 5GI</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Principal Accountable Person</th>
+            <td class="govuk-table__cell">Greenways Limited</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Other Accountable Persons</th>
+            <td class="govuk-table__cell">Rune Ltd<br>John Smith</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="govuk-inset-text">
+        <p>
+          [Greenways Limited] confirms that each accountable person has complied with their obligations to provide the information listed in the Higher-Risk Buildings (Keeping and Provision of Information etc.) (England) Regulations 2024 and The Higher-Risk Buildings (Management of Safety Risks etc.) Regulations 2023 to the persons listed above in accordance with section 89 of the Building Safety Act 2022.
+        </p>
+        <p>
+          [Greenways Limited] also confirms that [Greenways Limited] have notified the Building Safety Regulator of any change to structure and fire safety information within 28 days of [Greenways Limited] becoming aware of the change, in accordance with Regulation 21 of the Higher-Risk Buildings (Key Building Information etc) (England) Regulations 2023.
+        </p>
+      </div>
+
+      <form class="form" action="upload-all" method="post">
+
+        <button class="govuk-button" data-module="govuk-button">Agree and continue</button>
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
