@@ -1,7 +1,7 @@
 {% extends "layouts/main.html" %}
 
 {% block pageTitle %}
-{{ serviceName }} – GOV.UK Prototype Kit
+  {{ serviceName }} – GOV.UK Prototype Kit
 {% endblock %}
 
 {% block header %}
@@ -18,16 +18,11 @@
         href: "#"
       },
       {
-        text: "Housing, local and community",
+        text: "Section",
         href: "#"
       },
       {
-        text: "Planning and building",
-        href: "#"
-      },
-      {
-        text: "Building regulation",
-        href: "#"
+        text: "Subsection"
       }
     ]
   }) }}
@@ -40,16 +35,12 @@
     <div class="govuk-grid-column-two-thirds">
 
       <h1 class="govuk-heading-xl">
-        Apply for a building assessment certificate
+        {{ serviceName }}
       </h1>
 
-      <p>Use this service to submit an application for a building assessment certificate, or apply for an extension.</p>
+      <p>Use this service to submit an application for a building assessment certificate.</p>
 
       <p>The Building Safety Regulator will tell you when you need to apply for a building assessment certificate. You can only apply when BSR directs you to.</p>
-
-      <p>It is the duty of the principal accountable person to ensure the application is submitted within 28 days of being told to apply. If we do not recieve an application in time, they will be served an enforcement notice.</p>
-
-      <p>Only the principal accountable person, or someone authorised to act for them may submit an application.</p>
 
       <p>You will need to upload:</p>
 
@@ -73,7 +64,7 @@
 
       {{ govukButton({
         text: "Start now",
-        href: "reference",
+        href: "access-an-application-PostSub",
         isStartButton: true
       }) }}
 
@@ -82,7 +73,7 @@
       </h2>
 
       <p>
-        If you need help using this service <a href="https://www.gov.uk/guidance/contact-the-building-safety-regulator">contact us</a>.
+        If you need help using this service <a href="#">contact us</a>.
       </p>
 
     </div>
@@ -91,23 +82,23 @@
 
       <aside class="govuk-prototype-kit-common-templates-related-items" role="complementary">
         <h2 class="govuk-heading-m" id="subsection-title">
-          Related guidance
+          Subsection
         </h2>
         <nav role="navigation" aria-labelledby="subsection-title">
           <ul class="govuk-list govuk-!-font-size-16">
             <li>
               <a href="#">
-                Safety case reports
+                Related link
               </a>
             </li>
             <li>
               <a href="#">
-                Mandatory occrruence reporting
+                Related link
               </a>
             </li>
             <li>
               <a href="#" class="govuk-!-font-weight-bold">
-                More <span class="govuk-visually-hidden">in Related guidance</span>
+                More <span class="govuk-visually-hidden">in Subsection</span>
               </a>
             </li>
           </ul>

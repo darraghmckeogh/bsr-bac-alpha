@@ -1,0 +1,44 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Application submitted – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      {{ govukPanel({
+        titleText: "Application for extension submitted",
+        html: "Application reference<br><strong>BAC123456789</strong>"
+      }) }}
+
+      <p>We have recieved your application for a 28 day extension to apply for your Building Assessment Certificate for Chester House.</p>
+
+      <p>
+        We have sent you a confirmation email. We have also sent a confirmation email to the named contact at Greenways Limited.
+      </p>
+
+      <h2 class="govuk-heading-m">
+        What happens next
+      </h2>
+
+      <p>
+        We'll review your application for an extension and contact you about the outcome. This usually takes X days.
+      </p>
+
+      <p>Your application for an extension may not be accepted.</p>
+
+      <p>Unless it is accepted, you must <a href="declare-89">apply for a building assessment certificate for Chester House</a> by 10 May 2024.</p>
+
+      <p>If you need to speak to anyone about your application, <a href="#">contact BSR</a>.</p>
+
+    </div>
+  </div>
+
+  <div style="background-color:rgb(55, 55, 89); border: 1px; width: 300px; padding: 20px; margin-bottom: 20px; margin-left: -20px;">
+    <a style="color: white;" href="email30-extension-submitted">New email from noreplyBSR</a>
+  </div>
+
+{% endblock %}

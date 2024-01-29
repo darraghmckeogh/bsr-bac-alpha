@@ -40,14 +40,12 @@
     <div class="govuk-grid-column-two-thirds">
 
       <h1 class="govuk-heading-xl">
-        Apply for a building assessment certificate
+        {{ serviceName }}
       </h1>
-
-      <p>Use this service to submit an application for a building assessment certificate, or apply for an extension.</p>
 
       <p>The Building Safety Regulator will tell you when you need to apply for a building assessment certificate. You can only apply when BSR directs you to.</p>
 
-      <p>It is the duty of the principal accountable person to ensure the application is submitted within 28 days of being told to apply. If we do not recieve an application in time, they will be served an enforcement notice.</p>
+      <p>It is the duty of the principal accountable person to ensure the application is submitted within 28 days of being told to apply. If we do not recieve an application in time, they may be served an enforcement notice.</p>
 
       <p>Only the principal accountable person, or someone authorised to act for them may submit an application.</p>
 
@@ -55,7 +53,7 @@
 
       <ul class="govuk-list govuk-list--bullet">
         <li>safety case report</li>
-        <li>mandatory occurrence reporting plan</li>
+        <li>an outline of your mandatory occurrence reporting system</li>
         <li>resident engagement strategy</li>
       </ul>
 
@@ -67,13 +65,13 @@
 
       <p>Find out more about the <a href="#">Building Safety Regulator charging scheme</a>.</p>
 
-      <p>Once you have submitted your application, it will take some time to review it. If we are not satisfied with your application, we will contact you to rectify any problems.</p>
+      <p>Once you have submitted your application, it will take some time to review it. If we are not satisfied with your application, we will contact you to ask for more information.</p>
 
       <p>If you're granted a building assessment certificate, you will be able to download it. You must print it and display it somewhere in the building where residents will see it.</p>
 
       {{ govukButton({
         text: "Start now",
-        href: "reference",
+        href: "is-there-a-hrb-reference",
         isStartButton: true
       }) }}
 
@@ -95,6 +93,11 @@
         </h2>
         <nav role="navigation" aria-labelledby="subsection-title">
           <ul class="govuk-list govuk-!-font-size-16">
+            <li>
+              <a href="#">
+                Applying for a building assessment certificate
+              </a>
+            </li>
             <li>
               <a href="#">
                 Safety case reports
