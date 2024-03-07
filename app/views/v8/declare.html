@@ -1,0 +1,31 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Declaration – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">Declaration</h1>
+
+      <p>By submitting this application for a building assessment certificate for Chester House, you are confirming that the details you are providing are correct.</p>
+
+      <p>You must not give false or misleading information to the Building Safety Regulator (BSR). Knowingly or recklessly giving false or misleading information is a criminal offence under section 24 of the Building Safety Act 2022. BSR may consider taking enforcement action against you. Any enforcement action will be considered in line with our enforcement policy statement.</p>
+
+      <p>Once you have submitted your application, you cannot use this service to amend your answers.</p>
+
+      <p>If we need any further information to assist with your application, we will contact you.</p>
+
+      <form class="form" action="payment-method" method="post">
+
+        <button class="govuk-button" data-module="govuk-button">Declare and submit</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

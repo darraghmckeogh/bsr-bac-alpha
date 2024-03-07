@@ -1,0 +1,39 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-l">Charges for assessing your application
+      </h1>
+
+      <p>There is an application charge of £288 (including VAT) for your building assessment certificate application. You can pay this by card or invoice.</p>
+
+      <p>The assessment of your application will also incur further ongoing charges. BSR will charge you:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>£144 (including VAT) per person for every hour we spend assessing your application</li>
+        <li>any costs to BSR of support from relevant authorities or third parties</li>
+      </ul>
+
+      <p>We will send a monthly invoice by email for these ongoing charges.</p>
+
+      <p>The charges which apply are detailed in the Building Safety Regulator charging scheme.</p>
+
+      <form class="form" action="invoice" method="post">
+
+        {% from "govuk/components/radios/macro.njk" import govukRadios %}
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

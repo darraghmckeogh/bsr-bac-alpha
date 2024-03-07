@@ -1,0 +1,83 @@
+{% extends "govuk-prototype-kit/layouts/unbranded.html" %}
+
+{% block pageTitle %}
+  Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-!-padding-bottom-5"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Microsoft_Office_Outlook_%282018–present%29.svg/826px-Microsoft_Office_Outlook_%282018–present%29.svg.png" width="40px"></div>
+
+<p><strong>From:</strong> noreplyBSR@hse.gov.uk
+  <br><strong>To:</strong> PAP or PAP named contact
+  <br><strong>Cc:</strong> Primary user & secondary user
+  <br><strong>Subject:</strong> Application for building assessment certificate for Chester House submitted
+</p>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+{% from "govuk/components/header/macro.njk" import govukHeader %}
+{{ govukHeader({
+  homepageUrl: "#"
+}) }}
+
+<div class="govuk-!-padding-bottom-5"></div>
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <p>We have recieved your application for a building assessment certificate for [Chester House] ([HRB123456789]).</p>
+
+      <p>Documents submitted:</p>
+
+      <ul class="govuk-list govuk-list--bullet">
+        <li>chester-house_safety-case-report(2).pdf</li>
+        <li>[list name of each doc uploaded]</li>
+      </ul>
+
+      <h2 class="govuk-heading-m">
+        What happens next
+      </h2>
+
+      <p>We will review the information you have submitted. We will contact you to let you know if we've recieved the required documents.</p>
+
+      <p>If we require any further information to assist with your application, we will contact you.</p>
+
+      <p>You can check the status of your application at: <a href="#">https://www.gov.uk/guidance/apply-for-a-building-assessment-certificate</a>.</p>
+
+      <p>We cannot give advice about your application, but if you need to contact us about it go to: <a href="https://www.gov.uk/guidance/contact-the-building-safety-regulator">https://www.gov.uk/guidance/contact-the-building-safety-regulator</a>.</p>
+
+      <h2 class="govuk-heading-m">
+        [You must pay your invoice within 30 days
+      </h2>
+
+      <p>We've sent an invoice for the application charge to [charlotte.smith@greenways.co.uk]. You must pay this within 30 days of submitting your application.]</p>
+
+      <p>We will send an invoice [to charlotte.smith@greenways.co.uk] at the start of every month to charge you for the work undertaken to assess your application. Any charges which may apply are detailed in the Building Safety Regulator charging scheme at: <a href="https://www.hse.gov.uk/building-safety/charging-scheme.htm">https://www.hse.gov.uk/building-safety/charging-scheme.htm</a>.</p>
+
+      <h2 class="govuk-heading-m">
+        You must tell us as soon as reasonably practicable if you change your safety case report
+      </h2>
+
+      <p>We may need to review the changes.</p>
+
+      <p>Find out more about changing your safety case report at: <a href="#">https://www.gov.uk/guidance/preparing-a-safety-case-report</a>.</p>
+
+      <p>Tell us when you change it at: <a href="#">https://www.gov.uk/guidance/apply-for-a-building-assessment-certificate</a>.</p>
+
+<p>From the Health and Safety Executive</p>
+
+<p>As the Building Safety Regulator</p>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+<p>Do not reply to this email. It’s an automatic message from an unmonitored account.</p>
+
+</div>
+</div>
+
+<div style="background-color:rgb(55, 55, 89); border: 1px; width: 300px; padding: 20px; margin-bottom: 20px; margin-left: -20px;">
+  <a style="color: white;" href="email70-request-for-more-information">New email from noreplyBSR</a>
+</div>
+
+{% endblock %}

@@ -1,0 +1,59 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+Apply for a building assessment certificate for Chester House – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="upfront-invoice" method="post">
+
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+              <h1 class="govuk-fieldset__heading">
+                Where shall we issue the application charge invoice to?
+              </h1>
+            </legend>
+            <div class="govuk-radios" data-module="govuk-radios">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="whereDoYouLive" name="whereDoYouLive" type="radio" value="england">
+                <label class="govuk-label govuk-radios__label" for="whereDoYouLive">
+                  Use the details I've already provided
+                </label>
+                <div id="signIn-item-hint" class="govuk-hint govuk-radios__hint">
+                  Email address: [grace.smith@gmail.com]
+                  <br>Purchase order number: [12345678]
+                </div>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="whereDoYouLive-2" name="whereDoYouLive" type="radio" value="scotland">
+                <label class="govuk-label govuk-radios__label" for="whereDoYouLive-2">
+                  Provide new details
+                </label>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="govuk-button-group">
+          {{ govukButton({
+            text: "Save and continue"
+          }) }}
+        
+          {{ govukButton({
+            text: "Save and come back later",
+            classes: "govuk-button--secondary",
+            href: "building-holding-page-Returning"
+          }) }}
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

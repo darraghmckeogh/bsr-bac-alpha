@@ -1,0 +1,64 @@
+{% extends "govuk-prototype-kit/layouts/unbranded.html" %}
+
+{% block pageTitle %}
+  Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-!-padding-bottom-5"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Microsoft_Office_Outlook_%282018–present%29.svg/826px-Microsoft_Office_Outlook_%282018–present%29.svg.png" width="40px"></div>
+
+<p><strong>From:</strong> noreplyBSR@hse.gov.uk
+  <br><strong>To:</strong> PAP/PAP named contact
+  <br><strong>Cc:</strong> Primary user & secondary user
+  <br><strong>Subject:</strong> Reminder - deadline approaching to apply for a building assessment certificate for [Chester House]
+</p>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+{% from "govuk/components/header/macro.njk" import govukHeader %}
+{{ govukHeader({
+  homepageUrl: "#"
+}) }}
+
+<div class="govuk-!-padding-bottom-5"></div>
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+<p>As the principal accountable person for Chester House, you have 6 days left to apply to the Building Safety Regulator for a building assessment certificate.</p>
+
+<p>You must submit your application online at: <a href="start">https://www.gov.uk/guidance/apply-for-building-assessment-certification</a>.</p>
+
+<p>Find out what must be included in your application at: <a href="https://www.gov.uk/guidance/preparing-a-building-assessment-certificate-application">https://www.gov.uk/guidance/preparing-a-building-assessment-certificate-application</a>.</p>
+
+<h2 class="govuk-heading-m">If you do not apply for your building assessment certificate</h2>
+
+<p>Failure to submit your application within 28 days of being directed to apply is a criminal offence, under section 79(3) of the Building Safety Act 2022. BSR may consider taking enforcement action against you. Any enforcement action will be considered in line with our enforcement policy statement: <a href="https://www.hse.gov.uk/building-safety/enforcement-policy.htm">https://www.hse.gov.uk/building-safety/enforcement-policy.htm</a>.</p>
+
+<p>If you are not able to submit your application for your building assessment certificate within 28 days of being directed to, then email BSR to tell us the reasons why at: NoReplyBSR-InOccupation@hse.gov.uk.</p>
+
+<h2 class="govuk-heading-m">You will need to pay</h2>
+
+<p>There is an application charge of £288 (including VAT), this can be paid by card or invoice.</p>
+
+<p>The assessment of your application will also incur further ongoing charges. You will need to provide details so we can send you invoices for the work undertaken to assess your application. If you want to include a purchase order number on the invoices, you may want to get this before starting your application.</p>
+
+<p>Find out more about the charges which apply in the Building Safety Regulator charging scheme at: <a href="https://www.hse.gov.uk/building-safety/charging-scheme.htm">https://www.hse.gov.uk/building-safety/charging-scheme.htm</a>.</p>
+
+<h2 class="govuk-heading-m">If you do not think you should have recieved this email</h2>
+
+<p>If you are not the principal accountable person for Chester House, contact BSR at: <a href="#">https://www.contact-building-safety-regulator.service.gov.uk</a>.</p>
+
+<p>From the Health and Safety Executive</p>
+
+<p>As the Building Safety Regulator</p>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+<p>Do not reply to this email. It’s an automatic message from an unmonitored account.</p>
+
+</div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,54 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Question page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukBackLink({
+  text: "Back",
+  href: "javascript:window.history.back()"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <form class="form" action="declare-89" method="post">
+
+        {% from "govuk/components/character-count/macro.njk" import govukCharacterCount %}
+
+        {{ govukCharacterCount({
+          name: "withHint",
+          id: "with-hint",
+          maxlength: 200,
+          label: {
+            text: "Enter serial numbers of compliance notices you or any other accountable person has been given in relation to Chester House",
+            classes: "govuk-label--l",
+            isPageHeading: true
+          },
+          hint: {
+            text: "Only include notices served by the Building Safety Regulator under section 99 of the Building Safety Act 2022 that are currently in force. If no notices have been served, leave this blank."
+          }
+        }) }}
+
+        <div class="govuk-button-group">
+          {{ govukButton({
+            text: "Save and continue"
+          }) }}
+        
+          {{ govukButton({
+            text: "Save and come back later",
+            classes: "govuk-button--secondary",
+            href: "building-holding-page-Returning"
+          }) }}
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}

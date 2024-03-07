@@ -1,0 +1,54 @@
+{% extends "govuk-prototype-kit/layouts/unbranded.html" %}
+
+{% block pageTitle %}
+  Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-!-padding-bottom-5"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Microsoft_Office_Outlook_%282018–present%29.svg/826px-Microsoft_Office_Outlook_%282018–present%29.svg.png" width="40px"></div>
+
+<p><strong>From:</strong> NoReplyBSR-InOccupation@hse.gov.uk
+  <br><strong>To:</strong> PAP or PAP named contact
+  <br><strong>Cc:</strong> Primary user & secondary user
+  <br><strong>Subject:</strong> Initial review of your building assessment certificate application
+</p>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+{% from "govuk/components/header/macro.njk" import govukHeader %}
+{{ govukHeader({
+  homepageUrl: "#"
+}) }}
+
+<div class="govuk-!-padding-bottom-5"></div>
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <p>We have recieved your application for a building assessment certificate (BAC) for [Chester House] ([HRB123456789]) Your BAC application has undergone an initial review and we are writing to you to confirm that we have recieved the required documents.</p>
+
+      <h2 class="govuk-heading-m">
+        What happens next
+      </h2>
+
+      <p>Your BAC application will now move into the next stage where the detail of your submitted documents will be assessed.</p>
+
+      <p>If we need more information to assist with the assessment of your BAC application, we will contact you.</p>
+
+      <p>You can check the status of your application at: <a href="#">https://www.gov.uk/guidance/apply-for-a-building-assessment-certificate</a>.</p>
+
+      <p>If you need to you can contact BSR at: <a href="https://www.gov.uk/guidance/contact-the-building-safety-regulator">https://www.gov.uk/guidance/contact-the-building-safety-regulator</a>.</p>
+
+<p>From the Health and Safety Executive</p>
+
+<p>As the Building Safety Regulator</p>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+<p>Do not reply to this email. It’s an automatic message from an unmonitored account.</p>
+
+</div>
+</div>
+
+{% endblock %}

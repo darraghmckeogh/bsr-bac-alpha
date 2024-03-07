@@ -1,0 +1,53 @@
+{% extends "govuk-prototype-kit/layouts/unbranded.html" %}
+
+{% block pageTitle %}
+  Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-!-padding-bottom-5"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Microsoft_Office_Outlook_%282018–present%29.svg/826px-Microsoft_Office_Outlook_%282018–present%29.svg.png" width="40px"></div>
+
+<p><strong>From:</strong> BSR-InOccupation@hse.gov.uk
+  <br><strong>To:</strong> Charlotte Smith
+  <br><strong>Subject:</strong> Building assessment certificate application for Chester House refused
+</p>
+
+<div style="background-color:rgb(236, 236, 236); border: 1px; width: 300px; padding: 20px; margin-bottom: 20px;">
+  <a href="#">Building-Assessment-Notice-of-Refusal_Chester-House.pdf</a>
+</div>
+
+<div style="background-color:rgb(236, 236, 236); border: 1px; width: 300px; padding: 20px; margin-bottom: 20px;">
+  <a href="#">BSR_Request-For-Review.pdf</a>
+</div>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+{% from "govuk/components/header/macro.njk" import govukHeader %}
+{{ govukHeader({
+  homepageUrl: "#"
+}) }}
+
+<div class="govuk-!-padding-bottom-5"></div>
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <p>Dear [PAP org/individual name],</p>
+
+      <p>The Building Safety Regulator has refused your application for a building assessment certificate for [Chester House] under section 81(3)(b) of the Building Safety Act 2022.</p>
+
+      <p>Attached is the notification of refusal which outlines the reasons why your building assessment certificate has been refused and your rights to request a review of this decision under section 25 of the act.</p>
+
+      <p>You will receive further correspondence from BSR outlining the actions you now need to take and a timescale for doing this.</p>
+
+<p>From the Health and Safety Executive</p>
+
+<p>As the Building Safety Regulator</p>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+</div>
+</div>
+
+{% endblock %}

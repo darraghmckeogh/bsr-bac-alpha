@@ -1,0 +1,30 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Chester House – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukPhaseBanner({
+    tag: {
+      text: "Alpha"
+    },
+    html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">Your unsaved answers have been deleted</h1>
+
+      <p>We have deleted your unsaved answers because you did not do anything for 15 minutes. This is to protect your information.</p>
+
+      <p>If you have an application reference, you can <a href="access-an-application-Returning">return to your application</a>. If not, you will need to <a href="/questions/building/building-name">start again</a>.</p>
+
+    </div>
+  </div>
+
+{% endblock %}
