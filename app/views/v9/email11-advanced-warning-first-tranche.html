@@ -1,0 +1,86 @@
+{% extends "govuk-prototype-kit/layouts/unbranded.html" %}
+
+{% block pageTitle %}
+  Unbranded page template – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-!-padding-bottom-5"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/df/Microsoft_Office_Outlook_%282018–present%29.svg/826px-Microsoft_Office_Outlook_%282018–present%29.svg.png" width="40px"></div>
+
+<p><strong>From:</strong> noreplyBSR@hse.gov.uk
+  <br><strong>To:</strong> PAP individual/PAP named contact
+  <br><strong>Subject:</strong> Advance notice that you you will soon be directed to apply for a building assessment certificate
+</p>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+{% from "govuk/components/header/macro.njk" import govukHeader %}
+{{ govukHeader({
+  homepageUrl: "#"
+}) }}
+
+<div class="govuk-!-padding-bottom-5"></div>
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+<p>Under the Building Safety Act 2022, the Building Safety Regulator will direct [Greenways Limited/Andy Smith] to apply for a building assessment certificate (BAC) for these buildings in the next month:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+    <li>[Chester House] [(HRB123456789)]</li>
+    <li>[Shepherds Court] [(HRB987654321)]</li>
+    <li>[Dual Towers] [(HRB122333344)]</li>
+</ul>
+
+<p>Your BAC application must include:</p>
+
+<ul class="govuk-list govuk-list--bullet">
+  <li>safety case report</li>
+  <li>information on your mandatory occurrence reporting system</li>
+  <li>resident engagement strategy</li>
+  <li>statement confirming that you and accountable persons have provided information to relevant persons</li>
+</ul>
+
+<h2 class="govuk-heading-m">Related guidance</h2>
+
+<p>Preparing a safety case report: <a href="https://www.gov.uk/guidance/preparing-a-safety-case-report">https://www.gov.uk/guidance/preparing-a-safety-case-report</a></p>
+
+<p>Safety case toolkit: <a href="https://buildingsafety.campaign.gov.uk/wp-content/uploads/sites/157/2024/02/23_032-Safety-Case-Toolkit-Reasonable-Steps-and-Practical-Examples-Feb-2024.pdf">https://buildingsafety.campaign.gov.uk/wp-content/uploads/sites/157/2024/02/23_032-Safety-Case-Toolkit-Reasonable-Steps-and-Practical-Examples-Feb-2024.pdf</a></p>
+
+<p>Preparing a resident engagement strategy: <a href="https://www.gov.uk/guidance/preparing-a-resident-engagement-strategy">https://www.gov.uk/guidance/preparing-a-resident-engagement-strategy</a></p>
+
+<p>Residents engagement strategy case studies: <a href="https://buildingsafety.campaign.gov.uk/wp-content/uploads/sites/157/2023/11/23_029-Residents-Engagement-Strategy-Case-Studies-Nov-23-1.pdf">https://buildingsafety.campaign.gov.uk/wp-content/uploads/sites/157/2023/11/23_029-Residents-Engagement-Strategy-Case-Studies-Nov-23-1.pdf</a></p>
+
+<p>Operating a complaints system for building safety in a high-rise residential building: <a href="https://www.gov.uk/guidance/operating-a-complaints-system-for-building-safety-in-a-high-rise-residential-building">https://www.gov.uk/guidance/operating-a-complaints-system-for-building-safety-in-a-high-rise-residential-building</a></p>
+
+<p>Safety in high-rise buildings: accountable persons: <a href="https://www.gov.uk/guidance/safety-in-high-rise-residential-buildings-accountable-persons">https://www.gov.uk/guidance/safety-in-high-rise-residential-buildings-accountable-persons</a></p>
+
+<p>The role and responsibilities of accountable persons and principal accountable persons: <a href="https://buildingsafety.campaign.gov.uk/making-buildings-safer/roles-and-responsibilities-for-high-rise-residential-buildings/role-of-accountable-persons-for-high-rise-residential-buildings/">https://buildingsafety.campaign.gov.uk/making-buildings-safer/roles-and-responsibilities-for-high-rise-residential-buildings/role-of-accountable-persons-for-high-rise-residential-buildings/</a></p>
+
+<h2 class="govuk-heading-m">What happens next</h2>
+
+<p>We will send you a direction to apply. This will contain a link to the online application form you will need to access to make your application. You will need to use your application reference. This is the same as the buildings registration number. You will have 28 days to submit your application.</p>
+
+<p>You will not be able to submit your BAC application until you recieve the direction to apply for the building.</p>
+
+<h2 class="govuk-heading-m">If you do not think you should have recieved this email</h2>
+
+<p>If you are not the principal accountable person for [Chester House], contact BSR at: <a href="#">www.contact-building-safety-regulator.service.gov.uk</a>.</p>
+
+<p>From the Health and Safety Executive</p>
+
+<p>As the Building Safety Regulator</p>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+<p>Do not reply to this email. It’s an automatic message from an unmonitored account.</p>
+
+</div>
+</div>
+
+<div style="background-color:rgb(55, 55, 89); border: 1px; width: 300px; padding: 20px; margin-bottom: 20px; margin-left: -20px;">
+  <a style="color: white;" href="email20-direction-to-apply-PNC">View next email from noreplyBSR</a>
+</div>
+
+{% endblock %}

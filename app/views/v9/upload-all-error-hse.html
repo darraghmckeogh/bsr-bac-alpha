@@ -1,0 +1,168 @@
+{% extends "layouts/main.html" %}
+{% set title = "Upload documents for [Chester House]" %}
+
+{% block pageTitle %}
+  {{title}} – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block content %}
+
+<style>
+  .govuk-summary-list__key {
+    width:60%
+  }
+</style>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-three-quarters-from-desktop">
+
+      <div class="govuk-error-summary" data-module="govuk-error-summary">
+
+        <div role="alert">
+          <h2 class="govuk-error-summary__title">
+            There is a problem
+          </h2>
+          <div class="govuk-error-summary__body">
+            <ul class="govuk-list govuk-error-summary__list">
+              <li>
+                <a href="#not-uploaded-error">The selected file has not fully uploaded</a>
+              </li>
+              <li>
+                <a href="#select-error">Select a file</a>
+              </li>
+              <li>
+                <a href="#empty-error">The selected file is empty</a>
+              </li>
+              <li>
+                <a href="#smaller-error">The selected file must be smaller than 3GB</a>
+              </li>
+              <li>
+                <a href="#already-error">The selected file has already been uploaded</a>
+              </li>
+              <li>
+                <a href="#type-error">The selected file must be a JPG, PNG or PDF</a>
+              </li>
+              <li>
+                <a href="#virus-error">The selected file contains a virus</a>
+              </li>
+              <li>
+                <a href="#could-not-error">The selected file could not be uploaded</a>
+              </li>
+              <li>
+                <a href="#could-not-error">The selected file must not contain special characters, like '-', '!' or '@'</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      
+      
+      <h1 class="govuk-heading-l">{{ title }}</h1>
+
+      <p>
+        You must upload your:
+      </p>
+  
+      <ul class="govuk-list govuk-list--bullet">
+        <li>safety case report</li>
+        <li>information about your mandatory occurrence reporting system</li>
+        <li>resident engagement strategy</li>
+      </ul>
+  
+      <div class="govuk-inset-text">
+        Make sure the documents are identifiable by the file name. If you upload a file containing more than one document, the file name must reference all the documents included.
+      </div>
+  
+      <p>You can upload multiple files in PDF or image format. Each file must be smaller than 3GB.</p>
+
+      <p>If you do not provide all these documents we may not accept your building assessment certificate application as completed within the 28 day deadline. If this happens, BSR may consider taking enforcement action in line with our enforcement policy statement.</p>
+
+      <p>If we need more information to assist with your application, we will contact you.</p>
+
+    <p id="upload-update" class="govuk-body govuk-!-display-none" aria-live="assertive" aria-relevant="all">1 of 9 files uploaded</p>
+
+    <button id="upload-more" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+      Add more files
+    </button>
+
+    <div>
+      <div>
+        <dl class="govuk-summary-list govuk-summary-list--long-key">
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              <strong>receipt1.jpg</strong>
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <strong class="govuk-tag govuk-tag--green">uploaded
+              </strong>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              <strong>
+                receipt2.jpg
+              </strong>
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <strong class="govuk-tag govuk-tag--yellow">uploading
+              </strong>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              <strong>
+                receipt3.jpg
+              </strong>
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <strong class="govuk-tag govuk-tag--red">file too large
+              </strong>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              <strong>
+                receipt3.jpg
+              </strong>
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <strong class="govuk-tag govuk-tag--red">invalid file type
+              </strong>
+            </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dt class="govuk-summary-list__key">
+              <strong>
+                receipt-4.jpg
+              </strong>
+            </dt>
+            <dd class="govuk-summary-list__value">
+              <strong class="govuk-tag govuk-tag--red">name contains special characters
+              </strong>
+            </dd>
+          </div>
+        </dl>
+
+    <form action="" method="post">
+
+      {% from "govuk/components/button/macro.njk" import govukButton %}
+
+      <div class="govuk-button-group">
+        {{ govukButton({
+          text: "Save and continue",
+          href: "charges-overview"
+        }) }}
+      
+        {{ govukButton({
+          text: "Save and come back later",
+          classes: "govuk-button--secondary",
+          href: "building-holding-page-Returning"
+        }) }}
+      </div>
+
+      </form>
+
+  </div>
+</div>
+
+{% endblock %}

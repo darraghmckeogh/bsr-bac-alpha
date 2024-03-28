@@ -1,0 +1,75 @@
+{% extends "layouts/main.html" %}
+
+{% block pageTitle %}
+  Chester House – {{ serviceName }} – GOV.UK Prototype Kit
+{% endblock %}
+
+{% block beforeContent %}
+  {{ govukPhaseBanner({
+    tag: {
+      text: "Alpha"
+    },
+    html: 'This is a new service – your <a class="govuk-link" href="#">feedback</a> will help us to improve it.'
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <span class="govuk-caption-l">HRB123456789</span>
+
+      <h1 class="govuk-heading-l">Chester House</h1>
+
+      <h2 class="govuk-heading-m">
+        Building assessment certificate
+      </h2>
+
+      <p>Your deadline to apply for a building assessment certificate has passed.</p>
+
+      <p>Failure to submit your building assessment certificate application within 28 days of being directed to apply by the Building Safety Regulator is a criminal offence, under section 79(3) of the Building Safety Act 2022. The BSR may consider taking enforcement action against you. Any enforcement action will be considered in line with our enforcement policy statement.</p>
+
+      <div class="govuk-warning-text">
+        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+        <strong class="govuk-warning-text__text">
+          <span class="govuk-warning-text__assistive">Warning</span>
+          You must still apply for a building assessment certificate.
+        </strong>
+      </div>
+
+      {% from "govuk/components/button/macro.njk" import govukButton %}
+
+      {{ govukButton({
+        text: "Apply for a building assessment certificate",
+        href: "confirm-building"
+      }) }}
+
+    <h2 class="govuk-heading-m">
+      Registration
+    </h2>
+
+      <p>
+        We’ve approved the latest changes submitted on 20 January 2024.
+      </p>
+
+      <p>
+        You can <a href="#">view and update registration or structure and fire safety information, or manage who can use this service</a>.
+      </p>
+
+      <p>
+        If it is no longer a high-rise residential building, you can <a href="#">ask to remove this building from the register</a>.
+      </p>
+
+      <h2 class="govuk-heading-m">
+        Safety case report
+      </h2>
+
+      <p>
+        You must <a href="#">tell us if you change your safety case report</a>.
+      </p>
+
+    </div>
+  </div>
+
+{% endblock %}
